@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Google AdSense verification / loader -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3802348795219382"
-  crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3802348795219382"
+    crossorigin="anonymous"></script>
 
   <style>
     :root{
@@ -452,11 +452,32 @@
     .smallBtn.ghost{background: rgba(0,0,0,.18)}
     .smallBtn.ghost:hover{background: rgba(0,0,0,.26)}
 
+    /* Footer */
+    footer{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.02);
+      box-shadow: 0 18px 50px rgba(0,0,0,.25);
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color: rgba(231,238,247,.86);
+      font-weight:800;
+      font-size:13px;
+    }
+    .tiny{
+      color: var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+
     @media (max-width: 900px){
       .card{grid-column: span 12}
       .twoCols{grid-template-columns:1fr}
       .aboutGrid{grid-template-columns:1fr}
-
       details.appDetail{grid-column: span 12}
     }
   </style>
@@ -477,6 +498,7 @@
 
       <nav aria-label="Navigation">
         <a class="btn primary" href="#apps">Apps</a>
+        <a class="btn" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
         <a class="btn" href="#roadmap">Roadmap</a>
         <a class="btn" href="#about">About</a>
         <a class="btn" href="#contact">Contact</a>
@@ -498,6 +520,7 @@
 
       <div class="heroCtas">
         <a class="pill primary" href="#apps">See apps</a>
+        <a class="pill" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
         <a class="pill" href="/privacy/">Privacy Policy</a>
         <a class="pill" href="/account-deletion/">Account deletion</a>
       </div>
@@ -934,7 +957,10 @@
 
     <footer>
       <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
-      <div class="tiny">Parent company: <a class="link" href="https://www.antczak.co.uk" target="_blank" rel="noopener">antczak.co.uk</a></div>
+      <div class="tiny">
+        Blog: <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">blog.stellarliftapp.com</a>
+        · Parent company: <a class="link" href="https://www.antczak.co.uk" target="_blank" rel="noopener">antczak.co.uk</a>
+      </div>
     </footer>
   </div>
 
