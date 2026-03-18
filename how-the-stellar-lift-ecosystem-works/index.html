@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How the Stellar Lift Ecosystem Works | Stellar Lift</title>
+  <meta name="description" content="Learn how the Stellar Lift ecosystem works, why it uses separate focused apps, and how the website, blog, and app pages fit together." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --text:#e7eef7;
+      --muted:#9ab0c7;
+      --line:rgba(255,255,255,.08);
+      --accent:#ffb000;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --link:#7db4ff;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html{background:var(--bg)}
+
+    body{
+      margin:0;
+      font-family:"Exo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      line-height:1.65;
+      background:transparent;
+      position:relative;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+      background:
+        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%);
+    }
+
+    a{color:inherit; text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:980px; margin:0 auto; padding:24px 18px 54px}
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:16px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:240px;
+    }
+
+    .brandLogo{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      flex:0 0 auto;
+    }
+
+    .brandLogo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .brand h1{
+      font-size:18px;
+      margin:0;
+      letter-spacing:.2px;
+    }
+
+    .brand p{
+      margin:2px 0 0;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      backdrop-filter:blur(8px);
+      transition:transform .12s ease, border-color .12s ease, background .12s ease;
+      font-weight:800;
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+    }
+
+    .btn.primary{
+      border-color:rgba(255,176,0,.35);
+      background:rgba(255,176,0,.12);
+    }
+
+    .section{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      box-shadow:0 18px 50px rgba(0,0,0,.30);
+      overflow:hidden;
+    }
+
+    .sectionHead{
+      padding:18px 18px 0;
+    }
+
+    .sectionHead h2,
+    .sectionHead h3{
+      margin:0 0 8px;
+    }
+
+    .sectionHead p{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:14px;
+      max-width:85ch;
+    }
+
+    .sectionBody{
+      padding:0 18px 18px;
+    }
+
+    .lead{
+      font-size:15px;
+      color:var(--text);
+      margin:0;
+    }
+
+    .list{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.75;
+    }
+
+    .list li{margin:8px 0}
+
+    .card{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      background:rgba(0,0,0,.16);
+      padding:16px;
+      margin-top:12px;
+    }
+
+    .card h4{
+      margin:0 0 8px;
+      font-size:15px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05);
+      font-weight:900;
+      font-size:13px;
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+
+    .cta:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.07);
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .cta.primary{
+      border-color:rgba(255,176,0,.38);
+      background:rgba(255,176,0,.12);
+    }
+
+    .link{
+      color:var(--link);
+      font-weight:900;
+    }
+
+    footer{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02);
+      box-shadow:0 18px 50px rgba(0,0,0,.25);
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:rgba(231,238,247,.86);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .tiny{
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/" aria-label="Stellar Lift home">
+        <div class="brandLogo" aria-hidden="true">
+          <img src="/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
+        </div>
+        <div>
+          <h1>Stellar Lift</h1>
+          <p>Simple trackers. Real progress.</p>
+        </div>
+      </a>
+
+      <nav aria-label="Navigation">
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="/about/">About</a>
+        <a class="btn" href="/support/">Support</a>
+        <a class="btn" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
+        <a class="btn primary" href="/how-the-stellar-lift-ecosystem-works/">Guide</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>How the Stellar Lift Ecosystem Works</h2>
+        <p>A simple explanation of how the apps, website, and blog fit together.</p>
+      </div>
+      <div class="sectionBody">
+        <p class="lead">
+          Stellar Lift is built as a focused ecosystem instead of one oversized all-in-one platform. The idea is straightforward: each app should stay simple, fast, and useful on its own, while the website and blog support the wider experience with product pages, guidance, and practical content.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h3>Why separate apps</h3>
+        <p>The ecosystem is designed this way on purpose.</p>
+      </div>
+      <div class="sectionBody">
+        <ul class="list">
+          <li>Each app can stay focused on one job.</li>
+          <li>The user experience stays lighter and faster.</li>
+          <li>People only install the tools they actually want.</li>
+          <li>The product avoids the clutter that often builds inside all-in-one fitness apps.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h3>What is live now</h3>
+        <p>The current live part of the ecosystem is intentionally simple.</p>
+      </div>
+      <div class="sectionBody">
+        <div class="card">
+          <h4>Training Tracker</h4>
+          <p>A simple workout logging app focused on consistency, speed, and recording real training sessions without unnecessary friction.</p>
+        </div>
+        <div class="card">
+          <h4>Water Tracker — Drink Reminder</h4>
+          <p>A hydration app focused on reminders, quick logging, and making daily water tracking easier to maintain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h3>How the website fits in</h3>
+        <p>The main site is there to support clarity, trust, and navigation.</p>
+      </div>
+      <div class="sectionBody">
+        <ul class="list">
+          <li>It explains what Stellar Lift is.</li>
+          <li>It gives each live app its own place.</li>
+          <li>It provides support, legal, and contact pages.</li>
+          <li>It connects the product side with the educational content side.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h3>How the blog fits in</h3>
+        <p>The blog adds useful content instead of just acting as filler.</p>
+      </div>
+      <div class="sectionBody">
+        <p class="lead">
+          The blog expands the ecosystem with practical reading about hydration, training, recovery, and consistency. The goal is not to dump random articles onto the site. The goal is to publish content that actually supports the apps and gives users a reason to stay on the wider platform.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h3>How it all connects</h3>
+        <p>The structure is simple on purpose.</p>
+      </div>
+      <div class="sectionBody">
+        <ul class="list">
+          <li>The homepage introduces the ecosystem and links to the core pages.</li>
+          <li>Each live app has its own page with a clearer description.</li>
+          <li>Guide pages add evergreen value directly on the main domain.</li>
+          <li>The blog provides ongoing practical content on related topics.</li>
+        </ul>
+
+        <div class="ctaRow">
+          <a class="cta primary" href="/">Go to homepage</a>
+          <a class="cta" href="/training-tracker/">Training Tracker</a>
+          <a class="cta" href="/water-tracker/">Water Tracker</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
+      <div class="tiny">
+        Blog: <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">blog.stellarliftapp.com</a>
+        · <a class="link" href="/about/">About</a>
+        · <a class="link" href="/support/">Support</a>
+        · <a class="link" href="/terms/">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
