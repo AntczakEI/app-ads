@@ -29,7 +29,6 @@
     *{box-sizing:border-box}
     html,body{height:100%}
 
-    /* Base background is flat */
     html{ background: var(--bg); }
 
     body{
@@ -37,11 +36,10 @@
       font-family:"Exo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       line-height:1.55;
-      background: transparent; /* IMPORTANT: no repeating gradients here */
+      background: transparent;
       position:relative;
     }
 
-    /* Single, slightly stronger gradient, fixed (never “starts again” mid page) */
     body::before{
       content:"";
       position:fixed;
@@ -106,7 +104,6 @@
       background: rgba(255,176,0,.12);
     }
 
-    /* HERO: full image (no cropping) */
     .heroImage{
       border:1px solid var(--line);
       border-radius: var(--radius);
@@ -120,7 +117,6 @@
       display:block;
     }
 
-    /* Text block UNDER the image */
     .heroText{
       margin-top:12px;
       border:1px solid var(--line);
@@ -317,7 +313,6 @@
       line-height:1.55;
     }
 
-    /* Footer */
     footer{
       margin-top:14px;
       border:1px solid var(--line);
@@ -489,6 +484,52 @@
 
             <a class="pill primary" href="#apps" style="width:100%; text-align:center;">Explore the apps</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest-blog" class="section" aria-label="Latest from the blog">
+      <div class="sectionHead">
+        <h3>Latest from the blog</h3>
+        <p>Practical articles on hydration, training, and recovery from the Stellar Lift blog.</p>
+      </div>
+      <div class="sectionBody">
+        <div class="grid">
+          <article class="card">
+            <div class="cardInner">
+              <div class="meta">
+                <h4><a href="https://blog.stellarliftapp.com/sweat-rate-vs-sodium-loss-after-training/" target="_blank" rel="noopener">Sweat Rate vs Sodium Loss: What to Measure After Hard Training</a></h4>
+                <p>Learn the difference between sweat rate and sodium loss, what each one tells you, and what actually matters for hydration after hard training.</p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="gp primary" href="https://blog.stellarliftapp.com/sweat-rate-vs-sodium-loss-after-training/" target="_blank" rel="noopener">Read article</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardInner">
+              <div class="meta">
+                <h4><a href="https://blog.stellarliftapp.com/rest-day-vs-active-recovery/" target="_blank" rel="noopener">Rest Day vs Active Recovery: What Your Body Actually Needs</a></h4>
+                <p>Understand when full rest makes more sense, when active recovery helps, and how to make better recovery decisions around training.</p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="gp" href="https://blog.stellarliftapp.com/rest-day-vs-active-recovery/" target="_blank" rel="noopener">Read article</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardInner">
+              <div class="meta">
+                <h4><a href="https://blog.stellarliftapp.com/core-training-for-fighters/" target="_blank" rel="noopener">Core Training for Fighters</a></h4>
+                <p>A practical guide to building a stronger, more useful core for combat sports without wasting time on low-value exercises.</p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="gp" href="https://blog.stellarliftapp.com/core-training-for-fighters/" target="_blank" rel="noopener">Read article</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
