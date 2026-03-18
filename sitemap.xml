@@ -2,20 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stellarliftapp.com/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/about/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/support/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/terms/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/training-tracker/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/water-tracker/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/how-to-track-workouts/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/why-hydration-tracking-matters/</loc>
+  </url>
+  <url>
+    <loc>https://stellarliftapp.com/how-the-stellar-lift-ecosystem-works/</loc>
   </url>
   <url>
     <loc>https://stellarliftapp.com/privacy/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://stellarliftapp.com/account-deletion/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
