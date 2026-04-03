@@ -4,7 +4,7 @@ title: "Upper Body Strength for Fighters: What to Build and What to Avoid"
 date: 2026-03-19
 categories: [training]
 tags: [training, fighters, upper body strength, muay thai, boxing, combat sports, strength training]
-permalink: /upper-body-strength-for-fighters/
+permalink: /training/upper-body-strength-for-fighters/
 excerpt: "Upper body strength can help fighters hit harder, stay stronger in clinch exchanges, and reduce injury risk — but only if it is built the right way. Here is what matters, what to avoid, and how to train it without wrecking your shoulders."
 description: "Learn how to build useful upper body strength for fighters. This guide covers the best exercises, the right balance of pushing and pulling, shoulder health, and mistakes that can hurt performance."
 ---
