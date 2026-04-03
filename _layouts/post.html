@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{% if page.title %}{{ page.title | escape }} — {% endif %}{{ site.title | escape }}</title>
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description | escape }}" />
+  {% elsif page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}" />
+  {% elsif site.description %}
+  <meta name="description" content="{{ site.description | escape }}" />
+  {% endif %}
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  <meta name="theme-color" content="#0b0f14" />
+  <meta name="robots" content="index,follow" />
+  <meta name="google-adsense-account" content="ca-pub-3802348795219382">
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3802348795219382"
+    crossorigin="anonymous"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDVLQ1QYLZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FDVLQ1QYLZ');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="{{ site.title | escape }}" />
+  <meta property="og:title" content="{{ page.title | escape }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  {% if page.description %}
+  <meta property="og:description" content="{{ page.description | escape }}" />
+  {% elsif page.excerpt %}
+  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}" />
+  {% endif %}
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.title | escape }}" />
+  {% if page.description %}
+  <meta name="twitter:description" content="{{ page.description | escape }}" />
+  {% elsif page.excerpt %}
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}" />
+  {% endif %}
+</head>
+
+<body>
+  <div class="bg-fixed" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Stellar Lift home">
+          <span class="brand-badge" aria-hidden="true">★</span>
+          <span class="brand-text">{{ site.title }}</span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+          <a class="nav-link" href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a class="nav-link" href="{{ '/hydration/' | relative_url }}">Hydration</a>
+          <a class="nav-link" href="{{ '/training/' | relative_url }}">Training</a>
+          <a class="nav-link" href="{{ '/recovery/' | relative_url }}">Recovery</a>
+          <a class="nav-link" href="{{ '/about-blog/' | relative_url }}">About</a>
+          <a class="nav-link" href="{{ '/contact-blog/' | relative_url }}">Contact</a>
+          <a class="nav-link" href="{{ '/privacy-blog/' | relative_url }}">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="content">
+      <div class="content-wrap">
+        {% if page.categories and page.categories.size > 0 %}
+          <p class="eyebrow">{{ page.categories[0] }}</p>
+        {% endif %}
+
+        <article class="section">
+          <div style="padding: 22px 22px 10px;">
+            <h1>{{ page.title }}</h1>
+
+            {% if page.date %}
+              <p style="color: rgba(231,237,246,.55); font-size: 14px; margin-top: -4px;">
+                {{ page.date | date: "%B %-d, %Y" }}
+              </p>
+            {% endif %}
+
+            {% if page.description %}
+              <p class="section-intro">{{ page.description }}</p>
+            {% endif %}
+          </div>
+
+          <div style="padding: 0 22px 22px;">
+            {{ content }}
+          </div>
+        </article>
+
+        <div class="hero-cta" style="margin-top: 18px;">
+          <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Back to Blog</a>
+          {% if page.categories contains "hydration" %}
+            <a class="btn btn-ghost" href="{{ '/hydration/' | relative_url }}">More Hydration</a>
+          {% endif %}
+          {% if page.categories contains "training" %}
+            <a class="btn btn-ghost" href="{{ '/training/' | relative_url }}">More Training</a>
+          {% endif %}
+          {% if page.categories contains "recovery" %}
+            <a class="btn btn-ghost" href="{{ '/recovery/' | relative_url }}">More Recovery</a>
+          {% endif %}
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-row">
+          <div class="footer-brand">
+            <strong>Stellar Lift Blog</strong>
+            <span>Practical guides for hydration, training, and recovery.</span>
+          </div>
+
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="{{ '/about-blog/' | relative_url }}">About</a>
+            <a href="{{ '/contact-blog/' | relative_url }}">Contact</a>
+            <a href="{{ '/privacy-blog/' | relative_url }}">Privacy</a>
+            <a href="{{ '/cookies-blog/' | relative_url }}">Cookies</a>
+            <a href="{{ '/blog/' | relative_url }}">All Articles</a>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© {{ site.time | date: "%Y" }} Stellar Lift</span>
+          <span>Track. Improve. Repeat.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
