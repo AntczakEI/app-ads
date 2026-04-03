@@ -367,7 +367,7 @@
 
       <nav aria-label="Navigation">
         <a class="btn primary" href="#apps">Apps</a>
-        <a class="btn" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
+        <a class="btn" href="/blog/">Blog</a>
         <a class="btn" href="#roadmap">Roadmap</a>
         <a class="btn" href="/about/">About</a>
         <a class="btn" href="/support/">Support</a>
@@ -389,7 +389,7 @@
 
       <div class="heroCtas">
         <a class="pill primary" href="#apps">See apps</a>
-        <a class="pill" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
+        <a class="pill" href="/blog/">Blog</a>
         <a class="pill" href="/privacy/">Privacy Policy</a>
         <a class="pill" href="/account-deletion/">Account deletion</a>
       </div>
@@ -531,7 +531,7 @@
             <h4>More reading</h4>
             <p>
               Browse more practical content on the
-              <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Stellar Lift blog</a>.
+              <a class="link" href="/blog/">Stellar Lift blog</a>.
             </p>
           </div>
         </div>
@@ -582,7 +582,7 @@
     <footer>
       <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
       <div class="tiny">
-        Blog: <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">blog.stellarliftapp.com</a>
+        Blog: <a class="link" href="/blog/">/blog/</a>
         · <a class="link" href="/about/">About</a>
         · <a class="link" href="/support/">Support</a>
         · <a class="link" href="/terms/">Terms</a>
@@ -597,7 +597,7 @@
 
     (async function () {
       const grid = document.getElementById("latest-blog-grid");
-      const feedUrl = "https://blog.stellarliftapp.com/feed.xml";
+      const feedUrl = "/feed.xml";
 
       function escapeHtml(str) {
         return String(str || "")
@@ -650,7 +650,7 @@
           const description = truncate(stripHtml(summary || fallbackContent), 170);
 
           const linkEl = getFirst(entry, "link");
-          const url = linkEl ? linkEl.getAttribute("href") : "https://blog.stellarliftapp.com";
+          const url = linkEl ? linkEl.getAttribute("href") : "/blog/";
 
           const buttonClass = index === 0 ? "gp primary" : "gp";
 
@@ -658,12 +658,12 @@
             <article class="card">
               <div class="cardInner">
                 <div class="meta">
-                  <h4><a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(title)}</a></h4>
+                  <h4><a href="${escapeHtml(url)}" rel="noopener">${escapeHtml(title)}</a></h4>
                   <p>${escapeHtml(description)}</p>
                 </div>
               </div>
               <div class="actions">
-                <a class="${buttonClass}" href="${escapeHtml(url)}" target="_blank" rel="noopener">Read article</a>
+                <a class="${buttonClass}" href="${escapeHtml(url)}" rel="noopener">Read article</a>
               </div>
             </article>
           `;
@@ -676,12 +676,12 @@
           <article class="card">
             <div class="cardInner">
               <div class="meta">
-                <h4><a href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Visit the Stellar Lift blog</a></h4>
+                <h4><a href="/blog/" rel="noopener">Visit the Stellar Lift blog</a></h4>
                 <p>The latest articles could not be loaded automatically right now. You can still browse all posts on the blog.</p>
               </div>
             </div>
             <div class="actions">
-              <a class="gp primary" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Open blog</a>
+              <a class="gp primary" href="/blog/" rel="noopener">Open blog</a>
             </div>
           </article>
         `;
