@@ -346,11 +346,11 @@ A few basic rules help:
 
 If your gym work is making your technical sessions worse, you are doing it wrong.
 
-For a broader combat sports strength approach, read [Strength Training for Muay Thai: Best Exercises](/strength-training-for-muay-thai-best-exercises/) and [Muay Thai Strength Training Program: 2 Days a Week](/muay-thai-strength-training-program-2-days-week/).
+For a broader combat sports strength approach, read [Strength Training for Muay Thai: Best Exercises](/training/strength-training-for-muay-thai-best-exercises/) and [Muay Thai Strength Training Program: 2 Days a Week](/training/muay-thai-strength-training-program-2-days-week/).
 
-For trunk work that supports power transfer and control, see [Core Training for Fighters](/core-training-for-fighters/).
+For trunk work that supports power transfer and control, see [Core Training for Fighters](/training/core-training-for-fighters/).
 
-If fatigue is starting to build up, [Deload Week for Muay Thai and Gym](/deload-week-muay-thai-gym/) can help you reset before performance drops further.
+If fatigue is starting to build up, [Deload Week for Muay Thai and Gym](/training/deload-week-muay-thai-gym/) can help you reset before performance drops further.
 
 ## Common Mistakes Fighters Make With Upper Body Training
 
