@@ -4,7 +4,7 @@ title: "How to Recover Faster Between Two Training Sessions in One Day"
 date: 2026-03-21
 categories: [recovery]
 tags: [recovery, two-a-days, training, hydration, nutrition, fatigue, performance]
-permalink: /recover-between-two-training-sessions-in-one-day/
+permalink: /recovery/recover-between-two-training-sessions-in-one-day/
 excerpt: "If you train twice in one day, what you do between sessions can decide whether the second workout feels sharp or terrible. Here is how to recover faster between two training sessions without overcomplicating it."
 description: "Learn how to recover faster between two training sessions in one day. This guide covers hydration, food, rest, mobility, and the biggest mistakes that make the second workout feel worse."
 ---
@@ -75,7 +75,7 @@ If session one was sweaty, hard, or long, start drinking soon after finishing. Y
 
 If you regularly finish training dehydrated, the second session will usually feel worse than it needs to.
 
-For hydration basics, see [How Much Water to Drink When Training (Before, During, After)](/how-much-water-before-during-after-workout/).
+For hydration basics, see [How Much Water to Drink When Training (Before, During, After)](/hydration/how-much-water-before-during-after-workout/).
 
 ### 2. Cool Down Without Dragging It Out
 
@@ -148,9 +148,9 @@ Electrolytes matter more when:
 
 In those cases, plain water may not be enough to make you feel normal again.
 
-For more on this, read [Electrolytes for Workouts: When You Need Them (and When You Don’t)](/electrolytes-for-workouts/).
+For more on this, read [Electrolytes for Workouts: When You Need Them (and When You Don’t)](/hydration/electrolytes-for-workouts/).
 
-If you want to understand how much fluid you typically lose, [Sweat Rate Calculator for Workout Hydration](/sweat-rate-calculator-workout-hydration/) and [Sweat Rate vs Sodium Loss: What to Measure After Hard Training](/sweat-rate-vs-sodium-loss-after-training/) give you a better framework.
+If you want to understand how much fluid you typically lose, [Sweat Rate Calculator for Workout Hydration](/hydration/sweat-rate-calculator-workout-hydration/) and [Sweat Rate vs Sodium Loss: What to Measure After Hard Training](/hydration/sweat-rate-vs-sodium-loss-after-training/) give you a better framework.
 
 ## What to Eat Between Two Training Sessions
 
@@ -269,7 +269,7 @@ Napping is a tool, not a rule.
 
 If naps do not work for you, quiet rest can still help.
 
-For general sleep-related recovery, see [Sleep After Training: How to Recover Faster](/sleep-after-training-recover-faster/).
+For general sleep-related recovery, see [Sleep After Training: How to Recover Faster](/recovery/sleep-after-training-recover-faster/).
 
 ## Should You Stretch or Do Mobility Between Sessions?
 
