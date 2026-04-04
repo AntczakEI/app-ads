@@ -21,6 +21,8 @@ Post-workout hydration does not need to be complicated, but it should be intenti
 
 Here is a simple way to think about it.
 
+If you want the broader baseline first, start with [Hydration Basics: What Actually Matters](/hydration/hydration-basics-what-actually-matters/).
+
 ## Why drinking water after exercise matters
 
 During training, you lose fluid mainly through sweat and breathing. The longer and harder the session, the more likely those losses add up.
@@ -35,6 +37,8 @@ That matters because poor hydration after exercise can make recovery feel worse 
 - readiness for your next session
 
 If you only do a short light workout, the impact may be small. But if you train regularly, do longer sessions, exercise in the heat, or sweat heavily, post-workout hydration becomes much more important.
+
+This matters even more if you train again later the same day. For that scenario, also read [How to Recover Faster Between Two Training Sessions in One Day](/recovery/recover-between-two-training-sessions-in-one-day/).
 
 ## There is no single perfect number
 
@@ -63,7 +67,7 @@ That is why fixed advice is only a rough starting point.
 
 The most practical way to think about hydration after exercise is this:
 
-**drink enough to gradually replace the fluid you lost during the session.**
+**Drink enough to gradually replace the fluid you lost during the session.**
 
 That does not mean forcing huge amounts of water at once. It means rehydrating steadily over the next few hours.
 
@@ -73,9 +77,10 @@ If your session was long, intense, sweaty, or done in hot weather, you will usua
 
 ## The easiest practical approach
 
-If you do not want to measure anything, use this simple post-workout method:
+If you do not want to measure anything, use this simple post-workout method.
 
-### After a light or short workout
+## After a light or short workout
+
 Drink some water over the next hour and return to normal eating and drinking.
 
 For many people, that is enough after:
@@ -86,7 +91,8 @@ For many people, that is enough after:
 - technique-focused training
 - moderate sessions in cool conditions
 
-### After a hard or sweaty workout
+## After a hard or sweaty workout
+
 Drink more deliberately over the next few hours rather than all at once.
 
 This is more important after:
@@ -94,15 +100,18 @@ This is more important after:
 - long runs
 - hard sparring
 - conditioning sessions
-- combat sports training
+- combat-sports training
 - hot-weather workouts
 - double training days
 - any session where your clothes are noticeably soaked
 
-### Add food as well
+## Add food as well
+
 Hydration recovery is not only about water. A normal meal after training helps because food also supports fluid balance.
 
 That is one reason why a bottle of water plus a proper meal often works better than water alone.
+
+If you want the full training-window version too, read [How Much Water to Drink When Training (Before, During, After)](/hydration/how-much-water-before-during-after-workout/).
 
 ## If you want to be more accurate, use body weight
 
@@ -120,7 +129,9 @@ If your body weight is lower after the session, a lot of that difference is flui
 
 This gives you a much better idea of how much you need to replace than random guessing.
 
-## Do not try to “catch up” instantly
+For the more precise version, use [Sweat Rate Calculator: Your Workout Hydration Plan (Water + Sodium per Hour)](/hydration/sweat-rate-calculator-workout-hydration/).
+
+## Do not try to catch up instantly
 
 One common mistake is drinking too much water too quickly.
 
@@ -135,7 +146,7 @@ A better approach is to spread your drinking over time.
 
 Instead of forcing a huge amount immediately after training, rehydrate gradually over the next few hours. That is usually easier and more realistic.
 
-## Water is often enough — but not always
+## Water is often enough, but not always
 
 For many workouts, plain water is enough.
 
@@ -148,7 +159,8 @@ That is usually true if:
 
 But there are cases where water alone may not be the full answer.
 
-### When sodium also matters
+## When sodium also matters
+
 If you are a heavy sweater, train for a long time, or finish sessions covered in salt marks on your clothes or skin, you may be losing a meaningful amount of sodium as well as water.
 
 In those cases, drinking only plain water may not feel as effective as:
@@ -160,6 +172,10 @@ In those cases, drinking only plain water may not feel as effective as:
 This does not mean everyone needs sports drinks after every workout. Most people do not.
 
 It just means that after long, hot, very sweaty sessions, fluid replacement is not only about total water volume.
+
+For that side of the problem, read:
+- [Electrolytes for Workouts: When You Need Them (and When You Don’t)](/hydration/electrolytes-for-workouts/)
+- [Sweat Rate vs Sodium Loss: What to Measure After Hard Training](/hydration/sweat-rate-vs-sodium-loss-after-training/)
 
 ## Signs you may need more fluid after training
 
@@ -175,6 +191,8 @@ You do not need to obsess over every small sensation, but common signs of under-
 
 None of these signs is perfect on its own, but together they can tell you that your post-workout hydration strategy is not quite enough.
 
+If you want the earlier warning signs more clearly broken down, read [How to Tell If You’re Actually Dehydrated (Before It Hurts Performance)](/hydration/how-to-tell-if-you-are-dehydrated/).
+
 ## Signs you may be overdoing it
 
 Some people go too far the other way and force excessive amounts of water.
@@ -189,36 +207,47 @@ That can leave you feeling:
 
 More is not always better. The goal is to replace losses sensibly, not to turn hydration into a challenge.
 
+If you want that risk explained properly, read [Can You Drink Too Much Water During Exercise? Hyponatremia Symptoms, Risk, and Prevention](/hydration/can-you-drink-too-much-water-hyponatremia/).
+
 ## What changes your hydration needs most
 
-If you want to keep things simple, pay attention to the biggest factors:
+If you want to keep things simple, pay attention to the biggest factors.
 
 ## 1. Session length
+
 A 30-minute session and a 2-hour session do not create the same fluid demands.
 
 ## 2. Heat and humidity
+
 Training in hot conditions usually increases sweat loss fast.
 
 ## 3. Intensity
+
 Hard intervals, sparring, circuits, and intense conditioning usually increase fluid needs.
 
 ## 4. Your personal sweat rate
+
 Some people simply sweat much more than others doing the same workout.
 
 ## 5. Your next session
+
 If you are training again later the same day or early the next morning, post-workout hydration matters more.
+
+If heat is a recurring issue, also read [Hydration in Hot Weather: How to Train in Heat Without Crashing](/hydration/hydration-in-hot-weather-training/).
 
 ## A simple post-workout hydration routine
 
 If you want a practical default routine, use this:
 
-### After normal training
+## After normal training
+
 - drink water soon after the session
 - continue drinking over the next few hours
 - eat a normal meal
 - do not force excessive amounts
 
-### After very sweaty training
+## After very sweaty training
+
 - drink more deliberately over the next few hours
 - include a meal or some sodium
 - avoid waiting too long before rehydrating
@@ -228,26 +257,31 @@ It does not need to be more complicated than that for most people.
 
 ## Common mistakes
 
-### Waiting too long to drink
+## Waiting too long to drink
+
 Some people finish training, get distracted, and barely drink for hours.
 
-### Drinking huge amounts at once
+## Drinking huge amounts at once
+
 This often feels worse than drinking steadily over time.
 
-### Ignoring sweat losses in hot conditions
+## Ignoring sweat losses in hot conditions
+
 What works in cool weather may not be enough in summer or in a hot gym.
 
-### Forgetting that food helps too
+## Forgetting that food helps too
+
 A good post-workout meal supports recovery and hydration better than water alone.
 
-### Using a one-size-fits-all rule forever
+## Using a one-size-fits-all rule forever
+
 Your needs change depending on the session.
 
 ## So how much water should you drink after exercise?
 
 The honest answer is:
 
-**enough to replace what you lost, without forcing more than you need.**
+**Enough to replace what you lost, without forcing more than you need.**
 
 For easy sessions, that may just mean drinking normally and having a meal.
 
@@ -264,3 +298,12 @@ Look at the session. Think about how much you sweated. Drink steadily after trai
 That is a better approach than guessing, and a much better one than overcomplicating it.
 
 If you want to improve hydration, consistency matters more than precision. A simple plan you actually follow beats a perfect formula you ignore.
+
+## Related hydration guides
+
+- [Hydration Basics: What Actually Matters](/hydration/hydration-basics-what-actually-matters/)
+- [How Much Water to Drink When Training (Before, During, After)](/hydration/how-much-water-before-during-after-workout/)
+- [How to Tell If You’re Actually Dehydrated (Before It Hurts Performance)](/hydration/how-to-tell-if-you-are-dehydrated/)
+- [Electrolytes for Workouts: When You Need Them (and When You Don’t)](/hydration/electrolytes-for-workouts/)
+- [Sweat Rate Calculator: Your Workout Hydration Plan (Water + Sodium per Hour)](/hydration/sweat-rate-calculator-workout-hydration/)
+- [Can You Drink Too Much Water During Exercise? Hyponatremia Symptoms, Risk, and Prevention](/hydration/can-you-drink-too-much-water-hyponatremia/)
