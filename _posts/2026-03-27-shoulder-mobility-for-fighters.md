@@ -23,6 +23,10 @@ Real shoulder mobility is not just about being loose. It is about having enough 
 
 For fighters, that matters more than most people realize.
 
+If your shoulders already feel beat up across the week, also read:
+- [Rest Day vs Active Recovery: What Should You Actually Do?](/recovery/rest-day-vs-active-recovery/)
+- [Sleep After Training: How to Recover Faster and Perform Better](/recovery/sleep-after-training-how-to-recover-faster-and-perform-better/)
+
 ## Why shoulder mobility matters for fighters
 
 Your shoulders do not work in isolation.
@@ -92,7 +96,7 @@ Common signs include:
 
 - shoulders feel stiff during warm-ups
 - overhead positions feel awkward
-- upper-body sessions feel “jammed”
+- upper-body sessions feel jammed
 - guard position fatigues your shoulders too fast
 - your shoulders feel constantly tight after training
 - rotation feels limited or uneven
@@ -105,12 +109,15 @@ Again, this does not automatically mean something serious is wrong. But it does 
 A useful approach should improve:
 
 ## 1. Movement quality
+
 You want the shoulder and scapula to move better, not just feel stretched for five minutes.
 
 ## 2. Control
+
 You need to own the positions you reach.
 
 ## 3. Training tolerance
+
 Better shoulder mobility should support punching, clinch work, upper-body lifting, and general training volume.
 
 That is the real standard. Not how fancy the drill looks.
@@ -201,7 +208,7 @@ Why this helps:
 
 ## 5. Pulling volume and upper-back support
 
-This is not a “mobility drill,” but it matters.
+This is not a mobility drill, but it matters.
 
 A lot of fighters simply need more quality pulling work.
 
@@ -227,7 +234,7 @@ If you want a broader look at upper-body gym work for fighters, read [Upper Body
 
 Here is a practical routine you can use before training or on recovery days.
 
-## Option 1: Short pre-training routine
+## Option 1: short pre-training routine
 
 - thoracic rotations — 6 to 8 reps per side
 - scapular wall slides — 8 to 10 reps
@@ -239,7 +246,7 @@ This should take around 5 to 8 minutes.
 
 The goal is not fatigue. The goal is better movement quality before training.
 
-## Option 2: Slightly longer recovery session
+## Option 2: slightly longer recovery session
 
 - foam roller thoracic extensions — 6 to 8 reps
 - open books — 6 reps per side
@@ -323,6 +330,8 @@ A good target is:
 
 If your shoulders constantly feel stiff, beat up, or restricted, it is usually smarter to start small and stay consistent rather than go too hard for a few days and stop.
 
+On easier days, this can fit well alongside [10-Minute Mobility Routine: Daily Reset for Hips, Ankles, and Upper Back](/recovery/10-minute-mobility-routine/).
+
 ## Final thoughts
 
 Shoulder mobility for fighters is not about chasing extreme ranges or copying random mobility trends.
@@ -340,3 +349,10 @@ For most fighters, the right approach is simple:
 That is what usually gives the best return.
 
 If you want the full routine in one place, check out the [Shoulder Mobility for Fighters guide](https://www.amazon.com/dp/B0GSGSVCRC) for a more structured format with clear routines and practical exercise flow.
+
+## Related recovery and training guides
+
+- [Upper Body Strength for Fighters: What to Build and What to Avoid](/training/upper-body-strength-for-fighters/)
+- [Rest Day vs Active Recovery: What Should You Actually Do?](/recovery/rest-day-vs-active-recovery/)
+- [Sleep After Training: How to Recover Faster and Perform Better](/recovery/sleep-after-training-how-to-recover-faster-and-perform-better/)
+- [10-Minute Mobility Routine: Daily Reset for Hips, Ankles, and Upper Back](/recovery/10-minute-mobility-routine/)
