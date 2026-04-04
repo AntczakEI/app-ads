@@ -41,7 +41,7 @@ That means your strength and conditioning work should focus on:
 
 The goal is not to become a powerlifter or bodybuilder. The goal is to become a better-prepared fighter.
 
-If you want a broader look at how gym work fits around martial arts training, read [Muay Thai + Gym: How to Balance Both Without Burning Out](/training/muay-thai-and-gym-balance/).
+If you want a broader look at how gym work fits around martial arts training, read [Muay Thai + Gym: How to Balance Both Without Burning Out](/training/muay-thai-gym-how-to-balance-both-without-burning-out/).
 
 ## What makes an exercise good for Muay Thai?
 
