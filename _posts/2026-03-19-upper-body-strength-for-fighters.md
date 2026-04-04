@@ -47,13 +47,13 @@ This is the question that matters.
 
 Useful upper body strength for fighters usually comes down to five things:
 
-### 1. Pulling Strength
+## 1. Pulling Strength
 
 Pulling strength matters for posture, balance, clinch control, grip involvement, and keeping the upper back strong enough to handle volume.
 
 If your upper back is weak, your shoulders often pay the price. Your posture can collapse, your punches can get sloppier, and your shoulder mechanics can degrade over time.
 
-### 2. Pressing Strength
+## 2. Pressing Strength
 
 Pressing strength matters too, but it needs context.
 
@@ -61,19 +61,21 @@ You do need the ability to produce force through the upper body. Push-ups, dumbb
 
 Fighters often already get plenty of front-side stress from punching. If gym training adds even more without balancing it out, the shoulders start taking a beating.
 
-### 3. Shoulder Stability
+## 3. Shoulder Stability
 
 Shoulders do not just need to be strong. They need to be stable and durable.
 
 A fighter with strong pressing numbers but poor scapular control, weak upper back muscles, and irritated shoulders is not “strong” in any useful sense. That is just a problem waiting to happen.
 
-### 4. Rotational and Anti-Rotational Control
+## 4. Rotational and Anti-Rotational Control
 
 Fighting is not just about pushing and pulling in straight lines. Rotation matters. So does resisting unwanted rotation.
 
 That is why upper body work for fighters should not be built around chest and arms alone. The upper body has to work with the trunk, hips, and stance.
 
-### 5. Strength-Endurance and Positional Durability
+For that side of the puzzle, also read [Core Training for Fighters: What Actually Builds Power, Stability, and Transfer](/training/core-training-for-fighters/).
+
+## 5. Strength-Endurance and Positional Durability
 
 You do not only need force. You need the ability to hold position, repeat effort, and stay mechanically sound when tired.
 
@@ -179,7 +181,7 @@ No, face pulls are not magic. But if a fighter does a lot of punching and pressi
 
 ## 8. Carries
 
-Carries are one of the best “real-world strength” tools for fighters.
+Carries are one of the best real-world strength tools for fighters.
 
 Useful options include:
 
@@ -259,7 +261,7 @@ A lot of fighters shrug off shoulder pain because combat sports are rough anyway
 
 That is stupid.
 
-Some soreness and fatigue are normal. Ongoing shoulder irritation that builds week after week is not something to “tough out” forever. Your gym work should help make your shoulders more durable, not slowly wreck them.
+Some soreness and fatigue are normal. Ongoing shoulder irritation that builds week after week is not something to tough out forever. Your gym work should help make your shoulders more durable, not slowly wreck them.
 
 ## 5. Training Like Size Is the Main Goal
 
@@ -310,24 +312,24 @@ You do not need a complicated plan.
 
 Here is a simple upper body session that actually makes sense for fighters:
 
-### Option A: Basic Strength Session
+## Option A: Basic Strength Session
 
-1. Pull-Ups or Lat Pulldowns – 4 x 5–8  
-2. Dumbbell Bench Press – 3 x 6–10  
-3. Chest-Supported Row – 3 x 8–12  
-4. Landmine Press – 3 x 8–10 per side  
-5. Face Pulls or Rear Delt Flyes – 2–3 x 12–20  
+1. Pull-Ups or Lat Pulldowns – 4 x 5 to 8  
+2. Dumbbell Bench Press – 3 x 6 to 10  
+3. Chest-Supported Row – 3 x 8 to 12  
+4. Landmine Press – 3 x 8 to 10 per side  
+5. Face Pulls or Rear Delt Flyes – 2 to 3 x 12 to 20  
 6. Farmer’s Carries – 3 rounds
 
 That is enough.
 
-### Option B: Lower-Fatigue Upper Body Session
+## Option B: Lower-Fatigue Upper Body Session
 
-1. Push-Ups – 3–4 sets  
-2. One-Arm Cable or Dumbbell Row – 3 x 8–12  
-3. Landmine Press – 3 x 8–10  
-4. Assisted Pull-Ups or Lat Pulldowns – 3 x 8–12  
-5. Rear Delt Work – 2–3 x 15–20  
+1. Push-Ups – 3 to 4 sets  
+2. One-Arm Cable or Dumbbell Row – 3 x 8 to 12  
+3. Landmine Press – 3 x 8 to 10  
+4. Assisted Pull-Ups or Lat Pulldowns – 3 x 8 to 12  
+5. Rear Delt Work – 2 to 3 x 15 to 20  
 6. Suitcase Carries – 3 rounds
 
 This version is useful when you want training effect without too much fatigue.
@@ -346,31 +348,33 @@ A few basic rules help:
 
 If your gym work is making your technical sessions worse, you are doing it wrong.
 
-For a broader combat sports strength approach, read [Strength Training for Muay Thai: Best Exercises](/training/strength-training-for-muay-thai-best-exercises/) and [Muay Thai Strength Training Program: 2 Days a Week](/training/muay-thai-strength-training-program-2-days-week/).
+For a broader combat-sports strength approach, read [Strength Training for Muay Thai: Best Exercises (and What to Skip)](/training/strength-training-for-muay-thai-best-exercises/) and [Muay Thai Strength Training Program (2 Days/Week): Full Plan + Exercises](/training/muay-thai-strength-training-program-2-days-week/).
 
-For trunk work that supports power transfer and control, see [Core Training for Fighters](/training/core-training-for-fighters/).
+For trunk work that supports power transfer and control, see [Core Training for Fighters: What Actually Builds Power, Stability, and Transfer](/training/core-training-for-fighters/).
 
-If fatigue is starting to build up, [Deload Week for Muay Thai and Gym](/training/deload-week-muay-thai-gym/) can help you reset before performance drops further.
+If fatigue is starting to build up, [Deload Week for Muay Thai + Gym: When to Do It, How to Do It (Simple Template)](/recovery/deload-week-muay-thai-gym/) can help you reset before performance drops further.
+
+If your whole weekly setup feels off, also read [Muay Thai + Gym: How to Balance Both Without Burning Out](/training/muay-thai-gym-how-to-balance-both-without-burning-out/).
 
 ## Common Mistakes Fighters Make With Upper Body Training
 
-### 1. Chasing Numbers That Do Not Matter
+## 1. Chasing Numbers That Do Not Matter
 
 A bigger bench press is only useful if it helps the athlete, not if it wrecks the shoulders and drains recovery.
 
-### 2. Neglecting Pulling Strength
+## 2. Neglecting Pulling Strength
 
 Too much pushing and too little pulling is one of the fastest ways to make upper body training less effective.
 
-### 3. Confusing Fatigue With Good Programming
+## 3. Confusing Fatigue With Good Programming
 
 Feeling destroyed after upper body day does not mean the session was smart.
 
-### 4. Copying Bodybuilder Routines
+## 4. Copying Bodybuilder Routines
 
 Fighters are not bodybuilders. Their gym training should reflect that.
 
-### 5. Ignoring Carryover
+## 5. Ignoring Carryover
 
 Every upper body exercise should be judged by one question:
 
@@ -402,7 +406,7 @@ Not automatically. It depends on the athlete, shoulder history, striking volume,
 
 ### How often should fighters train upper body in the gym?
 
-Usually one to two focused upper body sessions per week is enough, depending on how much combat sports training they are already doing.
+Usually one to two focused upper body sessions per week is enough, depending on how much combat-sports training they are already doing.
 
 ## Final Takeaway
 
