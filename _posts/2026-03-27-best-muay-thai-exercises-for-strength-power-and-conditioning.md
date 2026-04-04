@@ -126,6 +126,8 @@ Why it works:
 
 These are hard, but they deliver.
 
+For a deeper breakdown, read [Should You Train Legs If You Do Muay Thai? (Soreness, Kicks, and Smart Programming)](/training/should-you-train-legs-with-muay-thai/).
+
 ## 5. Pull-ups or chin-ups
 
 Upper-body pulling strength matters more for fighters than many people think.
@@ -158,6 +160,8 @@ Why it works:
 - reinforces posture under fatigue
 
 For many fighters, more quality rowing would fix a lot of avoidable problems.
+
+If upper-body work is where you keep getting lost, read [Upper Body Strength for Fighters: What to Build and What to Avoid](/training/upper-body-strength-for-fighters/).
 
 ## The best Muay Thai exercises for power
 
@@ -210,6 +214,8 @@ Why it works:
 - is easy to recover from when volume stays sensible
 
 It is not a replacement for skill work, but it can complement it.
+
+For the trunk side of this, also read [Core Training for Fighters: What Actually Builds Power, Stability, and Transfer](/training/core-training-for-fighters/).
 
 ## 10. Kettlebell swings
 
@@ -297,18 +303,23 @@ Not every popular gym exercise is useless, but some are badly overused.
 Common examples:
 
 ## Endless isolation work
+
 A little arm work or shoulder work is fine. Building your whole plan around curls, lateral raises, and machine isolation is usually not.
 
 ## Fancy instability drills
+
 Standing on unstable surfaces while doing random movements may look athletic, but it often gives very little return.
 
 ## Too much pressing volume
+
 Some pressing is fine. Too much heavy pressing without enough pulling and shoulder control can become a problem fast.
 
 ## Conditioning circuits that destroy recovery
+
 If your gym session leaves you too cooked for pads, sparring, or technique work, it is not helping.
 
 ## Olympic lifts for people who do not coach them well
+
 These can be useful, but they are not mandatory. Most fighters get more return from simpler options they can perform safely and consistently.
 
 ## How to choose the right exercises
@@ -329,7 +340,7 @@ That is enough for most people.
 
 If your current plan already feels too crowded, do not add more. Choose better.
 
-If you want a more structured weekly setup, read [Muay Thai Strength Training Program: 2 Days Per Week](/training/muay-thai-strength-training-program-2-days-week/).
+If you want a more structured weekly setup, read [Muay Thai Strength Training Program (2 Days/Week): Full Plan + Exercises](/training/muay-thai-strength-training-program-2-days-week/).
 
 ## A simple example exercise selection
 
@@ -356,19 +367,31 @@ That is already enough to build useful strength and athletic support without tur
 ## Common mistakes
 
 ## Doing too much volume
+
 More exercises do not always mean better results.
 
 ## Chasing soreness
+
 Feeling destroyed is not the goal. Better transfer and better recovery matter more.
 
 ## Copying bodybuilder routines
+
 Some bodybuilding work can help, but it should not dominate a fighter’s program.
 
 ## Ignoring recovery cost
+
 A good exercise on paper is not always a good exercise in your week.
 
 ## Forgetting what the priority is
+
 If Muay Thai is your main sport, the gym should support it, not compete with it.
+
+If fatigue is already building, also read:
+
+- [How Many Rest Days Do You Really Need? (Gym + Muay Thai Recovery)](/recovery/how-many-rest-days-per-week-gym-muay-thai/)
+- [Deload Week for Muay Thai + Gym: When to Do It, How to Do It (Simple Template)](/recovery/deload-week-muay-thai-gym/)
+
+And if progression keeps stalling because the whole setup is too messy, use [Progressive Overload Explained: How to Keep Getting Stronger Without Guessing](/training/progressive-overload-explained-how-to-keep-getting-stronger/).
 
 ## Final thoughts
 
