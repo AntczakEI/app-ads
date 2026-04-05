@@ -5,16 +5,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Stellar Lift — Simple Trackers</title>
   <meta name="description" content="Stellar Lift apps: Training Tracker and Water Tracker. Simple, fast trackers for everyday progress." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta name="google-adsense-account" content="ca-pub-3802348795219382" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google AdSense verification / loader -->
+  <script>
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    window.openPrivacySettings = function(event) {
+      if (event) event.preventDefault();
+
+      if (
+        window.googlefc &&
+        typeof window.googlefc.showRevocationMessage === 'function'
+      ) {
+        window.googlefc.showRevocationMessage();
+      }
+
+      return false;
+    };
+
+    window.googlefc.callbackQueue.push({
+      CONSENT_API_READY: function () {
+        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+          link.hidden = false;
+          link.setAttribute('aria-hidden', 'false');
+        });
+      }
+    });
+  </script>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3802348795219382"
     crossorigin="anonymous"></script>
 
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDVLQ1QYLZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -258,6 +286,7 @@
       padding:0 18px 18px;
       display:flex; gap:10px; flex-wrap:wrap;
     }
+
     .gp{
       display:inline-flex; align-items:center; justify-content:center;
       padding:10px 14px;
@@ -392,6 +421,7 @@
         <a class="pill" href="/blog/">Blog</a>
         <a class="pill" href="/privacy/">Privacy Policy</a>
         <a class="pill" href="/account-deletion/">Account deletion</a>
+        <a class="pill" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
       </div>
     </section>
 
@@ -470,7 +500,7 @@
               <li><strong>Single purpose apps</strong> — focused tools for training, hydration, and long-term ecosystem growth.</li>
               <li><strong>Speed first</strong> — open → log → done. Minimal taps.</li>
               <li><strong>Consistency over complexity</strong> — features that help habits, not overwhelm you.</li>
-              <li><strong>Privacy-aware</strong> — collect as little as possible; ads only where applicable (see Privacy Policy).</li>
+              <li><strong>Privacy-aware</strong> — collect as little as possible; ads only where applicable.</li>
             </ul>
 
             <p style="margin-top:12px;">
@@ -490,7 +520,7 @@
 
             <div class="calloutTitle">Live now</div>
             <p class="calloutText">
-              Training Tracker and Water Tracker are live. Step Tracker is coming next (as shown in the roadmap).
+              Training Tracker and Water Tracker are live. Step Tracker is coming next.
             </p>
 
             <div style="height:12px"></div>
@@ -557,7 +587,8 @@
             <p>
               <a class="link" href="/privacy/">Privacy Policy</a><br>
               <a class="link" href="/account-deletion/">Account deletion</a><br>
-              <a class="link" href="/terms/">Terms</a>
+              <a class="link" href="/terms/">Terms</a><br>
+              <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
             </p>
           </div>
         </div>
@@ -587,6 +618,7 @@
         · <a class="link" href="/support/">Support</a>
         · <a class="link" href="/terms/">Terms</a>
         · <a class="link" href="/how-the-stellar-lift-ecosystem-works/">Ecosystem guide</a>
+        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
         · Parent company: <a class="link" href="https://www.antczak.co.uk" target="_blank" rel="noopener">antczak.co.uk</a>
       </div>
     </footer>
