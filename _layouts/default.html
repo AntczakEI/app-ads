@@ -57,7 +57,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ site.title | escape }}" />
@@ -82,27 +82,25 @@
   <div class="bg-fixed" aria-hidden="true"></div>
 
   <div class="page-shell">
-    <header class="site-header blog-brand-header">
-      <div class="site-header-inner blog-brand-header-inner">
-        <a class="blog-brand" href="https://stellarliftapp.com/" aria-label="Stellar Lift home">
-          <span class="blog-brand-logo">
-            <img src="https://stellarliftapp.com/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo" />
-          </span>
-          <span class="blog-brand-copy">
-            <span class="blog-brand-title">Stellar Lift</span>
-            <span class="blog-brand-subtitle">Simple trackers. Real progress.</span>
+    <header class="site-header">
+      <div class="site-header-inner site-header-inner--brand">
+        <a class="site-brand" href="https://stellarliftapp.com/" aria-label="Stellar Lift home">
+          <img class="site-brand-logo" src="https://stellarliftapp.com/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo" />
+          <span class="site-brand-copy">
+            <span class="site-brand-title">Stellar Lift</span>
+            <span class="site-brand-subtitle">Simple trackers. Real progress.</span>
           </span>
         </a>
 
-        <nav class="blog-top-nav" aria-label="Main navigation">
-          <a class="blog-top-link" href="https://stellarliftapp.com/">Home</a>
-          <a class="blog-top-link" href="{{ '/blog/' | relative_url }}">Blog</a>
-          <a class="blog-top-link" href="{{ '/hydration/' | relative_url }}">Hydration</a>
-          <a class="blog-top-link" href="{{ '/training/' | relative_url }}">Training</a>
-          <a class="blog-top-link" href="{{ '/recovery/' | relative_url }}">Recovery</a>
-          <a class="blog-top-link" href="{{ '/about-blog/' | relative_url }}">About</a>
-          <a class="blog-top-link" href="{{ '/contact-blog/' | relative_url }}">Contact</a>
-          <a class="blog-top-link" href="{{ '/privacy-blog/' | relative_url }}">Privacy</a>
+        <nav class="site-top-nav" aria-label="Main navigation">
+          <a class="site-top-link" href="https://stellarliftapp.com/">Home</a>
+          <a class="site-top-link" href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a class="site-top-link" href="{{ '/hydration/' | relative_url }}">Hydration</a>
+          <a class="site-top-link" href="{{ '/training/' | relative_url }}">Training</a>
+          <a class="site-top-link" href="{{ '/recovery/' | relative_url }}">Recovery</a>
+          <a class="site-top-link" href="{{ '/about-blog/' | relative_url }}">About</a>
+          <a class="site-top-link" href="{{ '/contact-blog/' | relative_url }}">Contact</a>
+          <a class="site-top-link" href="{{ '/privacy-blog/' | relative_url }}">Privacy</a>
         </nav>
       </div>
     </header>
