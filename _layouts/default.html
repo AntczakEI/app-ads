@@ -60,7 +60,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 
@@ -95,15 +95,25 @@
   <div class="bg-fixed" aria-hidden="true"></div>
 
   <div class="page-shell">
-    <header class="site-header">
+    <header class="site-header site-header--brand">
       <div class="site-header-inner">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Stellar Lift home">
-          <span class="brand-badge" aria-hidden="true">★</span>
-          <span class="brand-text">{{ site.title }}</span>
+        <a class="brand brand--full" href="https://stellarliftapp.com/" aria-label="Stellar Lift home">
+          <span class="brand-logo-wrap" aria-hidden="true">
+            <img
+              class="brand-logo-image"
+              src="https://stellarliftapp.com/assets/images/Main%20black%20logo.jpg"
+              alt=""
+            />
+          </span>
+
+          <span class="brand-copy">
+            <span class="brand-title">Stellar Lift</span>
+            <span class="brand-subtitle">Simple trackers. Real progress.</span>
+          </span>
         </a>
 
-        <nav class="nav" aria-label="Main navigation">
-          <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+        <nav class="nav nav--brand" aria-label="Main navigation">
+          <a class="nav-link" href="https://stellarliftapp.com/">Home</a>
           <a class="nav-link" href="{{ '/blog/' | relative_url }}">Blog</a>
           <a class="nav-link" href="{{ '/hydration/' | relative_url }}">Hydration</a>
           <a class="nav-link" href="{{ '/training/' | relative_url }}">Training</a>
@@ -130,6 +140,7 @@
           </div>
 
           <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="https://stellarliftapp.com/">Main site</a>
             <a href="{{ '/about-blog/' | relative_url }}">About</a>
             <a href="{{ '/contact-blog/' | relative_url }}">Contact</a>
             <a href="{{ '/privacy-blog/' | relative_url }}">Privacy</a>
