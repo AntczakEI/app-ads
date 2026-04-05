@@ -3,12 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Why Hydration Tracking Matters | Stellar Lift</title>
-  <meta name="description" content="Learn why hydration tracking matters, when it helps most, and how to keep it simple enough to stay consistent." />
+  <title>Why Hydration Tracking Matters | A Practical Guide by Stellar Lift</title>
+  <meta name="description" content="Learn why hydration tracking matters, when it helps most, and how to keep it simple enough to support better daily consistency without overcomplicating the process." />
+  <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://stellarliftapp.com/why-hydration-tracking-matters/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Why Hydration Tracking Matters" />
+  <meta property="og:description" content="A practical guide to why hydration tracking helps, when it matters most, and how to keep it simple enough to stay consistent." />
+  <meta property="og:url" content="https://stellarliftapp.com/why-hydration-tracking-matters/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Hydration Tracking Matters" />
+  <meta name="twitter:description" content="A practical guide to why hydration tracking helps, when it matters most, and how to keep it simple enough to stay consistent." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    window.openPrivacySettings = function(event) {
+      if (event) event.preventDefault();
+
+      if (
+        window.googlefc &&
+        typeof window.googlefc.showRevocationMessage === 'function'
+      ) {
+        window.googlefc.showRevocationMessage();
+      }
+
+      return false;
+    };
+
+    window.googlefc.callbackQueue.push({
+      CONSENT_API_READY: function () {
+        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+          link.hidden = false;
+          link.setAttribute('aria-hidden', 'false');
+        });
+      }
+    });
+  </script>
 
   <style>
     :root{
@@ -16,10 +56,12 @@
       --text:#e7eef7;
       --muted:#9ab0c7;
       --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.14);
       --accent:#ffb000;
       --shadow:0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
       --link:#7db4ff;
+      --max:980px;
     }
 
     *{box-sizing:border-box}
@@ -30,7 +72,7 @@
       margin:0;
       font-family:"Exo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
-      line-height:1.65;
+      line-height:1.72;
       background:transparent;
       position:relative;
     }
@@ -42,13 +84,14 @@
       pointer-events:none;
       z-index:-1;
       background:
-        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%);
+        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%),
+        linear-gradient(180deg, #07101a 0%, #0b0f14 100%);
     }
 
-    a{color:inherit; text-decoration:none}
+    a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline}
 
-    .wrap{max-width:980px; margin:0 auto; padding:24px 18px 54px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 54px}
 
     header{
       display:flex;
@@ -84,10 +127,11 @@
       display:block;
     }
 
-    .brand h1{
+    .brandName{
       font-size:18px;
       margin:0;
       letter-spacing:.2px;
+      font-weight:800;
     }
 
     .brand p{
@@ -113,7 +157,7 @@
       border-radius:999px;
       background:rgba(255,255,255,.04);
       backdrop-filter:blur(8px);
-      transition:transform .12s ease, border-color .12s ease, background .12s ease;
+      transition:transform .12s ease,border-color .12s ease,background .12s ease;
       font-weight:800;
       font-size:13px;
       white-space:nowrap;
@@ -152,11 +196,26 @@
       margin:0 0 14px;
       color:var(--muted);
       font-size:14px;
-      max-width:85ch;
+      max-width:90ch;
     }
 
     .sectionBody{
       padding:0 18px 18px;
+    }
+
+    .heroTitle{
+      margin:0 0 10px;
+      font-size:clamp(28px, 3.3vw, 42px);
+      line-height:1.12;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .subLead{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      max-width:92ch;
     }
 
     .lead{
@@ -167,10 +226,10 @@
 
     .list{
       margin:0;
-      padding-left:18px;
+      padding-left:20px;
       color:var(--muted);
-      font-size:14px;
-      line-height:1.75;
+      font-size:15px;
+      line-height:1.8;
     }
 
     .list li{margin:8px 0}
@@ -185,21 +244,27 @@
 
     .card h4{
       margin:0 0 8px;
-      font-size:15px;
+      font-size:16px;
     }
 
     .card p{
       margin:0;
       color:var(--muted);
-      font-size:14px;
-      line-height:1.65;
+      font-size:15px;
+      line-height:1.72;
+    }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
     .ctaRow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:14px;
+      margin-top:16px;
     }
 
     .cta{
@@ -231,6 +296,16 @@
       font-weight:900;
     }
 
+    .note{
+      margin-top:12px;
+      padding:14px 16px;
+      border-left:3px solid rgba(255,176,0,.75);
+      border-radius:12px;
+      background:rgba(255,176,0,.08);
+      color:var(--text);
+      font-size:14px;
+    }
+
     footer{
       margin-top:14px;
       border:1px solid var(--line);
@@ -251,6 +326,11 @@
       color:var(--muted);
       font-weight:800;
       font-size:13px;
+      line-height:1.6;
+    }
+
+    @media (max-width: 820px){
+      .twoCol{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -262,8 +342,8 @@
           <img src="/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
         </div>
         <div>
-          <h1>Stellar Lift</h1>
-          <p>Simple trackers. Real progress.</p>
+          <div class="brandName">Stellar Lift</div>
+          <p>Track. Improve. Repeat.</p>
         </div>
       </a>
 
@@ -279,79 +359,188 @@
 
     <section class="section">
       <div class="sectionHead">
-        <h2>Why Hydration Tracking Matters</h2>
-        <p>A practical look at why hydration tracking helps and how to keep it simple enough to stick with.</p>
+        <h1 class="heroTitle">Why hydration tracking matters more than most people think</h1>
+        <p class="subLead">
+          Hydration is one of those habits people often assume they are handling well until low energy, poor routine, headaches, inconsistent training sessions, or simple forgetfulness start showing that they are not.
+        </p>
       </div>
       <div class="sectionBody">
         <p class="lead">
-          Hydration is one of the easiest things to underestimate because the effects of inconsistency often build quietly. People usually notice the problem only when energy, focus, recovery, or training quality start to feel worse. Tracking helps because it makes hydration visible instead of guesswork.
+          The problem with hydration is not that it is complicated. The problem is that it is easy to ignore. Water intake usually does not feel urgent in the same way as hunger, work deadlines, messages, or training itself. Because of that, many people drift through the day underdrinking without paying much attention to it.
         </p>
+        <p class="lead" style="margin-top:14px;">
+          That is why hydration tracking can be useful. It does not magically solve the habit on its own, but it makes something invisible become visible. Once intake is visible, it becomes much easier to notice patterns, improve consistency, and stop relying on vague guesses like “I think I drank enough today.”
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          Good hydration tracking is not about obsession. It is about awareness. And for many people, awareness is exactly what has been missing.
+        </p>
+
+        <div class="ctaRow">
+          <a class="cta primary" href="/water-tracker/">Learn about Water Tracker</a>
+          <a class="cta" href="https://play.google.com/store/apps/details?id=com.stellarlift.watertracker" target="_blank" rel="noopener">Open in Google Play</a>
+          <a class="cta" href="/blog/">Visit the blog</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Why it helps</h3>
-        <p>Most people do not need complexity. They need awareness and consistency.</p>
+        <h2>Why hydration gets underestimated so easily</h2>
+        <p>Most people do not ignore water on purpose. They just let the day get in the way.</p>
       </div>
       <div class="sectionBody">
-        <ul class="list">
-          <li>It makes daily intake easier to see instead of estimate badly.</li>
-          <li>It helps people notice patterns in low intake days.</li>
-          <li>It supports routine by turning hydration into a repeatable habit.</li>
-          <li>It reduces the chance of ignoring water until late in the day.</li>
-        </ul>
+        <p class="lead">
+          Hydration tends to lose against louder priorities. Work happens. Errands happen. Stress happens. People leave the house, get busy, sit through long stretches without thinking about drinking, and then try to fix the whole day late in the evening.
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          Another reason hydration gets underestimated is that many people rely too heavily on rough instinct. Sometimes that works. Often it does not. A lot of people are not as aware of their intake as they think they are, especially on busy days or training days.
+        </p>
+        <div class="note">
+          If a habit is easy to forget, making it visible matters.
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>When tracking matters most</h3>
-        <p>Some situations make hydration awareness more useful than usual.</p>
+        <h2>What hydration tracking actually helps with</h2>
+        <p>Most people do not need a complicated system. They need awareness, structure, and repetition.</p>
+      </div>
+      <div class="sectionBody">
+        <div class="twoCol">
+          <div class="card">
+            <h4>It replaces guesswork with visibility</h4>
+            <p>
+              Instead of assuming intake is probably fine, tracking gives you a direct record of what you have actually had so far during the day.
+            </p>
+          </div>
+          <div class="card">
+            <h4>It makes low-intake patterns easier to spot</h4>
+            <p>
+              Once you start logging consistently, it becomes easier to notice repeated weak points such as mornings, workdays, travel days, or training days.
+            </p>
+          </div>
+          <div class="card">
+            <h4>It supports habit formation</h4>
+            <p>
+              A visible routine is easier to repeat. Tracking turns hydration from a vague intention into something measurable and more deliberate.
+            </p>
+          </div>
+          <div class="card">
+            <h4>It reduces the “too late” problem</h4>
+            <p>
+              A lot of people only realise they have barely had any water when the day is almost over. Tracking helps catch that earlier.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>When hydration tracking matters most</h2>
+        <p>Some situations make hydration awareness much more useful than usual.</p>
       </div>
       <div class="sectionBody">
         <div class="card">
-          <h4>Busy routines</h4>
-          <p>When the day gets packed, hydration is one of the first simple habits people forget.</p>
+          <h4>Busy routines and long workdays</h4>
+          <p>
+            When the day gets packed, hydration is one of the easiest habits to drop. Tracking adds a basic layer of accountability that stops the whole day disappearing without enough intake.
+          </p>
         </div>
+
         <div class="card">
           <h4>Training days</h4>
-          <p>Exercise increases the value of staying on top of intake, especially when sweating and recovery matter more.</p>
+          <p>
+            Exercise increases the value of staying on top of water intake, especially when sweating, overall performance, and recovery matter more than usual.
+          </p>
         </div>
+
         <div class="card">
           <h4>People who rarely feel “thirsty enough”</h4>
-          <p>Some people consistently underdrink because they rely too much on delayed cues instead of routine.</p>
+          <p>
+            Some people consistently underdrink because they rely too much on delayed cues instead of structure or routine. Tracking helps replace that guesswork.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Anyone trying to build a stronger daily routine</h4>
+          <p>
+            Hydration is one of the simplest habits to stabilise, which is why it is often a useful starting point for building better day-to-day consistency overall.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>What to keep simple</h3>
-        <p>Hydration tracking works better when it does not become annoying.</p>
+        <h2>What hydration tracking should not become</h2>
+        <p>The habit works better when it stays supportive instead of turning into constant micromanagement.</p>
       </div>
       <div class="sectionBody">
-        <ul class="list">
-          <li>Track intake quickly instead of aiming for perfect precision.</li>
-          <li>Use reminders only as support, not pressure.</li>
-          <li>Focus on daily consistency rather than obsessing over tiny details.</li>
-          <li>Make logging easy enough that you actually keep doing it.</li>
-        </ul>
+        <div class="card">
+          <h4>It should not become obsessive</h4>
+          <p>
+            The goal is not to create anxiety around every sip. The goal is to make hydration visible enough that better consistency becomes easier.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>It should not feel like admin work</h4>
+          <p>
+            If logging intake feels annoying, the system is probably too heavy. Hydration tracking needs to stay quick enough for everyday life.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>It should not depend on perfect precision</h4>
+          <p>
+            For most people, reasonable consistency matters more than trying to control every tiny detail perfectly.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>It should not replace common sense</h4>
+          <p>
+            Tracking is a practical support tool. It helps create awareness, but it still works best when used as part of a sensible daily routine.
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>A simple daily approach</h3>
-        <p>The best hydration system is usually the one you can repeat without effort.</p>
+        <h2>How to keep hydration tracking simple enough to stick with</h2>
+        <p>The best system is usually the one you can repeat without much friction.</p>
       </div>
       <div class="sectionBody">
         <ul class="list">
-          <li>Keep water visible.</li>
-          <li>Log intake when you drink it, not hours later.</li>
-          <li>Use reminders if they help maintain rhythm.</li>
-          <li>Stay consistent with the habit instead of chasing perfect numbers.</li>
+          <li>Track intake quickly instead of chasing perfect precision.</li>
+          <li>Log drinks when you have them instead of trying to remember hours later.</li>
+          <li>Use reminders only if they help support rhythm.</li>
+          <li>Keep water visible in your environment when possible.</li>
+          <li>Focus on daily consistency rather than obsessing over tiny differences.</li>
+          <li>Choose a method that feels light enough to keep using for weeks and months.</li>
         </ul>
+
+        <div class="note">
+          A simple system used consistently beats a perfect system abandoned after a week.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>A practical daily approach that works for most people</h2>
+        <p>Hydration becomes easier when the habit is tied to routine instead of random intention.</p>
+      </div>
+      <div class="sectionBody">
+        <p class="lead">
+          For most people, the best approach is not overly technical. Keep water accessible, log intake when you drink it, and use gentle reminders if they genuinely help. That is enough to build a much better baseline than doing nothing and hoping the day somehow takes care of itself.
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          Once the habit becomes more visible, it is easier to stop the classic pattern of realising too late that the day is almost over and intake has been poor from start to finish.
+        </p>
 
         <div class="ctaRow">
           <a class="cta primary" href="/water-tracker/">Learn about Water Tracker</a>
@@ -362,14 +551,29 @@
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Related reading</h3>
-        <p>More hydration content from the Stellar Lift blog.</p>
+        <h2>Where Water Tracker fits in</h2>
+        <p>This guide reflects the same idea behind the app: keep the process light, visible, and repeatable.</p>
+      </div>
+      <div class="sectionBody">
+        <p class="lead">
+          Water Tracker — Drink Reminder is built around the same logic described on this page. The app is meant to make hydration tracking easier, not more complicated.
+          It is designed for users who want quick logging, practical reminder support, and a clearer sense of daily intake without turning hydration into a chore.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>Related reading</h2>
+        <p>More pages connected to hydration and the wider Stellar Lift ecosystem.</p>
       </div>
       <div class="sectionBody">
         <ul class="list">
-          <li><a class="link" href="https://blog.stellarliftapp.com/sweat-rate-vs-sodium-loss-after-training/" target="_blank" rel="noopener">Sweat Rate vs Sodium Loss: What to Measure After Hard Training</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/how-much-water-before-during-after-workout/" target="_blank" rel="noopener">How Much Water to Drink When Training (Before, During, After)</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/electrolytes-for-workouts/" target="_blank" rel="noopener">Electrolytes for Workouts: When You Need Them (and When You Don’t)</a></li>
+          <li><a class="link" href="/water-tracker/">Water Tracker — Drink Reminder</a></li>
+          <li><a class="link" href="/hydration/">Hydration hub</a></li>
+          <li><a class="link" href="/training/">Training hub</a></li>
+          <li><a class="link" href="/blog/">Browse the blog</a></li>
+          <li><a class="link" href="/how-the-stellar-lift-ecosystem-works/">How the Stellar Lift Ecosystem Works</a></li>
         </ul>
       </div>
     </section>
@@ -377,10 +581,11 @@
     <footer>
       <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
       <div class="tiny">
-        Blog: <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">blog.stellarliftapp.com</a>
+        <a class="link" href="/blog/">Blog</a>
         · <a class="link" href="/about/">About</a>
         · <a class="link" href="/support/">Support</a>
         · <a class="link" href="/terms/">Terms</a>
+        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
       </div>
     </footer>
   </div>
