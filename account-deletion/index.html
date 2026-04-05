@@ -4,140 +4,400 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Account Deletion | Stellar Lift</title>
-  <meta name="description" content="How to request account deletion for Stellar Lift apps." />
+  <meta name="description" content="How to request account deletion for Stellar Lift apps and related account data." />
   <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://stellarliftapp.com/account-deletion/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Account Deletion | Stellar Lift" />
+  <meta property="og:description" content="How to request account deletion for Stellar Lift apps and related account data." />
+  <meta property="og:url" content="https://stellarliftapp.com/account-deletion/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Account Deletion | Stellar Lift" />
+  <meta name="twitter:description" content="How to request account deletion for Stellar Lift apps and related account data." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    window.openPrivacySettings = function(event) {
+      if (event) event.preventDefault();
+
+      if (
+        window.googlefc &&
+        typeof window.googlefc.showRevocationMessage === 'function'
+      ) {
+        window.googlefc.showRevocationMessage();
+      }
+
+      return false;
+    };
+
+    window.googlefc.callbackQueue.push({
+      CONSENT_API_READY: function () {
+        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+          link.hidden = false;
+          link.setAttribute('aria-hidden', 'false');
+        });
+      }
+    });
+  </script>
+
   <style>
     :root{
       --bg:#070b14;
-      --card:#0d1324;
-      --text:#e9eefb;
-      --muted:#a9b4d0;
-      --line:rgba(255,255,255,.10);
-      --accent:#f2b705;
-      --accent2:#ff8a00;
+      --text:#e9eefc;
+      --muted:#a9b4d3;
+      --border:rgba(255,255,255,.08);
+      --accent:#f5c542;
+      --link:#7db4ff;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
+      --max:1040px;
     }
+
     *{box-sizing:border-box}
+    html,body{height:100%}
+    html{background:var(--bg)}
+
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
+      font-family:"Exo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background:
-        radial-gradient(900px 500px at 20% -10%, rgba(242,183,5,.22), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(255,138,0,.14), transparent 60%),
-        radial-gradient(700px 400px at 50% 110%, rgba(120,160,255,.12), transparent 60%),
-        var(--bg);
-      line-height:1.55;
+        radial-gradient(900px 400px at 50% -120px, rgba(245,197,66,.25), transparent 60%),
+        radial-gradient(700px 380px at 15% 10%, rgba(125,180,255,.18), transparent 60%),
+        linear-gradient(180deg, #07101a 0%, #0b0f14 100%);
+      color:var(--text);
+      line-height:1.68;
     }
-    a{color:var(--accent); text-decoration:none}
+
+    a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:980px; margin:0 auto; padding:28px 16px 52px}
-    .top{
-      display:flex; gap:12px; align-items:center; justify-content:space-between;
-      padding:14px 16px; border:1px solid var(--line); border-radius:var(--radius);
-      background:rgba(13,19,36,.66); backdrop-filter: blur(10px);
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 54px}
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:16px;
+      flex-wrap:wrap;
     }
-    .brand{font-weight:800; letter-spacing:.2px}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border-radius:999px; border:1px solid var(--line);
-      color:var(--muted); font-size:13px;
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:240px;
     }
-    .card{
-      margin-top:18px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(13,19,36,.72);
-      padding:20px;
-    }
-    h1{margin:0 0 6px; font-size:26px}
-    h2{margin:22px 0 10px; font-size:18px}
-    p{margin:10px 0}
-    ul{margin:8px 0 8px 20px}
-    li{margin:6px 0}
-    .muted{color:var(--muted)}
-    .hr{height:1px; background:var(--line); margin:18px 0}
-    .box{
-      border:1px solid var(--line);
+
+    .brandLogo{
+      width:44px;
+      height:44px;
       border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.04);
-      padding:14px;
-      margin:12px 0;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      flex:0 0 auto;
     }
-    code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px}
-    .btn{
-      display:inline-block;
-      padding:12px 14px;
-      border-radius:12px;
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      color:#0b0f18;
+
+    .brandLogo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .brandName{
+      font-size:18px;
+      margin:0;
+      letter-spacing:.2px;
       font-weight:800;
     }
-    .btn:hover{filter:brightness(1.05); text-decoration:none}
-    .footer{margin-top:18px; color:var(--muted); font-size:13px}
+
+    .brand p{
+      margin:2px 0 0;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      backdrop-filter:blur(8px);
+      transition:transform .12s ease,border-color .12s ease,background .12s ease;
+      font-weight:800;
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+    }
+
+    .btn.primary{
+      border-color:rgba(245,197,66,.35);
+      background:rgba(245,197,66,.12);
+    }
+
+    .section{
+      margin-top:14px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .sectionHead{
+      padding:18px 18px 0;
+    }
+
+    .sectionBody{
+      padding:0 18px 18px;
+    }
+
+    .heroTitle{
+      margin:0 0 10px;
+      font-size:clamp(28px, 3.3vw, 42px);
+      line-height:1.12;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .meta{
+      color:var(--muted);
+      margin:0 0 14px;
+      font-size:14px;
+    }
+
+    .lead{
+      font-size:15px;
+      color:var(--text);
+      margin:0;
+    }
+
+    .card{
+      background:rgba(14,20,38,.72);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 18px 60px rgba(0,0,0,.35);
+      margin-top:14px;
+    }
+
+    h2{
+      margin:22px 0 10px;
+      font-size:20px;
+    }
+
+    p, li{
+      color:var(--text);
+      font-size:15px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    .link{
+      color:var(--link);
+      font-weight:900;
+    }
+
+    ul{
+      margin:8px 0 0 20px;
+      line-height:1.8;
+    }
+
+    .callout{
+      margin:12px 0 0;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05);
+      font-weight:900;
+      font-size:13px;
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+
+    .cta:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.07);
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .cta.primary{
+      border-color:rgba(245,197,66,.35);
+      background:rgba(245,197,66,.16);
+      color:var(--text);
+    }
+
+    footer{
+      margin-top:14px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02);
+      box-shadow:0 18px 50px rgba(0,0,0,.25);
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:rgba(233,238,252,.86);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .tiny{
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+      line-height:1.6;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="top">
-      <div class="brand">Stellar Lift</div>
-      <div class="pill">Account Deletion • Updated: <strong style="color:var(--text); font-weight:700;">2025-12-14</strong></div>
-    </div>
+    <header>
+      <a class="brand" href="/" aria-label="Stellar Lift home">
+        <div class="brandLogo" aria-hidden="true">
+          <img src="/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
+        </div>
+        <div>
+          <div class="brandName">Stellar Lift</div>
+          <p>Track. Improve. Repeat.</p>
+        </div>
+      </a>
 
-    <div class="card">
-      <h1>Request Account Deletion</h1>
-      <p class="muted">
-        Use the instructions below to request deletion of your account and the personal data associated with it.
-      </p>
+      <nav aria-label="Navigation">
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="/about/">About</a>
+        <a class="btn" href="/support/">Support</a>
+        <a class="btn" href="/privacy/">Privacy</a>
+        <a class="btn primary" href="/account-deletion/">Account deletion</a>
+      </nav>
+    </header>
 
-      <div class="hr"></div>
-
-      <h2>How to request deletion</h2>
-      <div class="box">
-        <p><strong>Send an email to:</strong> <a href="mailto:office@antczak.co.uk">office@antczak.co.uk</a></p>
-        <p><strong>Subject:</strong> <code>Account deletion request</code></p>
-        <p><strong>Include in the message:</strong></p>
-        <ul>
-          <li>The app name (e.g., <strong>Stellar Lift – Training Tracker</strong>)</li>
-          <li>The email address used to create/log into the account</li>
-          <li>Optional: any extra identifier shown in the app settings (if available)</li>
-        </ul>
-        <p>
-          <a class="btn" href="mailto:office@antczak.co.uk?subject=Account%20deletion%20request&body=App%20name%3A%20%0AAccount%20email%3A%20%0AOptional%20info%3A%20">Email request</a>
-        </p>
+    <section class="section">
+      <div class="sectionHead">
+        <h1 class="heroTitle">Account Deletion</h1>
+        <p class="meta">Updated: <strong>14 December 2025</strong></p>
       </div>
 
-      <h2>What will be deleted</h2>
-      <p>After we verify your request, we will delete (where applicable):</p>
-      <ul>
-        <li>Account identifiers (such as your login email)</li>
-        <li>Synced app data linked to your account (e.g., workout history, routines, settings stored on our systems)</li>
-      </ul>
+      <div class="sectionBody">
+        <div class="card">
+          <p class="lead">
+            This page explains how to request deletion of your Stellar Lift account and any related personal data associated with supported account-based features.
+          </p>
 
-      <h2>What may be retained</h2>
-      <p class="muted">
-        We may retain limited information where required for legal, security, or fraud-prevention reasons (for example, records needed to comply with tax/accounting obligations if purchases exist).
-        If we retain anything, we keep it only as long as necessary.
-      </p>
+          <h2>How to request deletion</h2>
+          <p>
+            Send an email to:
+            <a class="link" href="mailto:office@antczak.co.uk">office@antczak.co.uk</a>
+          </p>
+          <p>
+            Suggested subject:
+            <strong>Account deletion request</strong>
+          </p>
+          <p>Include the following in your message:</p>
+          <ul>
+            <li>The app name, for example <strong>Stellar Lift – Training Tracker</strong>.</li>
+            <li>The email address used to create or log into the account.</li>
+            <li>Optional extra identifying information shown in the app settings, if available.</li>
+          </ul>
 
-      <h2>Timeframe</h2>
-      <p>
-        We aim to complete deletion within <strong>30 days</strong> of a verified request.
-      </p>
+          <div class="ctaRow">
+            <a class="cta primary" href="mailto:office@antczak.co.uk?subject=Account%20deletion%20request&body=App%20name%3A%20%0AAccount%20email%3A%20%0AOptional%20info%3A%20">Email request</a>
+            <a class="cta" href="/privacy/">Privacy Policy</a>
+          </div>
 
-      <h2>Local-only data</h2>
-      <p>
-        If an app stores data only on your device, you can delete it by uninstalling the app or clearing app data in Android settings.
-      </p>
+          <h2>What may be deleted</h2>
+          <p>After we verify your request, we may delete, where applicable:</p>
+          <ul>
+            <li>Account identifiers such as your login email.</li>
+            <li>Synced app data linked to your account, for example workout history, routines, or settings stored on our systems.</li>
+          </ul>
 
-      <div class="hr"></div>
+          <h2>What may be retained</h2>
+          <p class="muted">
+            We may retain limited information where required for legal, security, fraud-prevention, or accounting reasons. If anything is retained, it will only be kept for as long as necessary for those purposes.
+          </p>
 
-      <p class="muted">
-        Privacy Policy: <a href="/privacy/">stellarliftapp.com/privacy</a>
-      </p>
+          <h2>Timeframe</h2>
+          <p>
+            We aim to complete deletion within <strong>30 days</strong> of a verified request.
+          </p>
 
-      <div class="footer">© 2025 Antczak Enterprise International — Stellar Lift</div>
-    </div>
+          <h2>Local-only data</h2>
+          <p>
+            If an app stores data only on your device, you may also be able to remove that data by uninstalling the app or clearing app data in Android settings.
+          </p>
+
+          <div class="callout">
+            If you are unsure whether your data is stored only locally or linked to an account, include the app name in your email and we will review the request accordingly.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Antczak Enterprise International — Stellar Lift</div>
+      <div class="tiny">
+        <a class="link" href="/">Home</a>
+        · <a class="link" href="/about/">About</a>
+        · <a class="link" href="/support/">Support</a>
+        · <a class="link" href="/privacy/">Privacy</a>
+        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
+      </div>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
