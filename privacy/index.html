@@ -2,13 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Privacy Policy | Stellar Lift</title>
-  <meta name="description" content="Privacy Policy for Stellar Lift apps and services." />
+  <meta name="description" content="Privacy Policy for Stellar Lift websites, apps, and related services under Antczak Enterprise International." />
+  <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://stellarliftapp.com/privacy/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy | Stellar Lift" />
+  <meta property="og:description" content="Privacy Policy for Stellar Lift websites, apps, and related services." />
+  <meta property="og:url" content="https://stellarliftapp.com/privacy/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | Stellar Lift" />
+  <meta name="twitter:description" content="Privacy Policy for Stellar Lift websites, apps, and related services." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    window.openPrivacySettings = function(event) {
+      if (event) event.preventDefault();
+
+      if (
+        window.googlefc &&
+        typeof window.googlefc.showRevocationMessage === 'function'
+      ) {
+        window.googlefc.showRevocationMessage();
+      }
+
+      return false;
+    };
+
+    window.googlefc.callbackQueue.push({
+      CONSENT_API_READY: function () {
+        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+          link.hidden = false;
+          link.setAttribute('aria-hidden', 'false');
+        });
+      }
+    });
+  </script>
 
   <style>
     :root{
@@ -19,59 +59,189 @@
       --border:rgba(255,255,255,.08);
       --accent:#f5c542;
       --link:#7db4ff;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1040px;
     }
+
     *{box-sizing:border-box}
+    html,body{height:100%}
+    html{background:var(--bg)}
+
     body{
       margin:0;
       font-family:"Exo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:radial-gradient(900px 400px at 50% -120px, rgba(245,197,66,.25), transparent 60%),
-                 radial-gradient(700px 380px at 15% 10%, rgba(125,180,255,.18), transparent 60%),
-                 var(--bg);
+      background:
+        radial-gradient(900px 400px at 50% -120px, rgba(245,197,66,.25), transparent 60%),
+        radial-gradient(700px 380px at 15% 10%, rgba(125,180,255,.18), transparent 60%),
+        linear-gradient(180deg, #07101a 0%, #0b0f14 100%);
       color:var(--text);
-      line-height:1.6;
+      line-height:1.68;
     }
+
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 54px}
+
     header{
-      padding:28px 16px 12px;
-      border-bottom:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(14,20,38,.85), rgba(7,11,20,.2));
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:16px;
+      flex-wrap:wrap;
     }
-    .wrap{max-width:900px;margin:0 auto;padding:0 16px}
+
     .brand{
-      font-weight:800;
-      letter-spacing:.6px;
-      color:var(--accent);
-      font-size:22px;
-      margin:0 0 6px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:240px;
     }
-    h1{margin:6px 0 0;font-size:28px}
-    .meta{color:var(--muted);margin:8px 0 0}
-    main{padding:22px 0 40px}
+
+    .brandLogo{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      flex:0 0 auto;
+    }
+
+    .brandLogo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .brandName{
+      font-size:18px;
+      margin:0;
+      letter-spacing:.2px;
+      font-weight:800;
+    }
+
+    .brand p{
+      margin:2px 0 0;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      backdrop-filter:blur(8px);
+      transition:transform .12s ease,border-color .12s ease,background .12s ease;
+      font-weight:800;
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+    }
+
+    .btn.primary{
+      border-color:rgba(245,197,66,.35);
+      background:rgba(245,197,66,.12);
+    }
+
+    .section{
+      margin-top:14px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .sectionHead{
+      padding:18px 18px 0;
+    }
+
+    .sectionBody{
+      padding:0 18px 18px;
+    }
+
+    .heroTitle{
+      margin:0 0 10px;
+      font-size:clamp(28px, 3.3vw, 42px);
+      line-height:1.12;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .meta{
+      color:var(--muted);
+      margin:0 0 14px;
+      font-size:14px;
+    }
+
+    .lead{
+      font-size:15px;
+      color:var(--text);
+      margin:0;
+    }
+
     .card{
-      background:rgba(14,20,38,.75);
+      background:rgba(14,20,38,.72);
       border:1px solid var(--border);
       border-radius:18px;
       padding:18px;
       box-shadow:0 18px 60px rgba(0,0,0,.35);
+      margin-top:14px;
     }
-    h2{margin:18px 0 8px;font-size:18px}
-    p, li{color:var(--text)}
-    .muted{color:var(--muted)}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
+
+    h2{
+      margin:18px 0 8px;
+      font-size:20px;
+    }
+
+    p, li{
+      color:var(--text);
+      font-size:15px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    .link{
+      color:var(--link);
+      font-weight:900;
+    }
+
     code{
       background:rgba(255,255,255,.06);
       padding:2px 6px;
       border-radius:8px;
       border:1px solid var(--border);
     }
-    footer{
-      padding:18px 0 28px;
-      color:var(--muted);
-      border-top:1px solid var(--border);
-      margin-top:22px;
-      font-size:14px;
+
+    ul{
+      margin:8px 0 0 20px;
+      line-height:1.8;
     }
-    ul{margin:8px 0 0 20px}
+
     .callout{
       margin:12px 0 0;
       padding:12px 14px;
@@ -81,114 +251,162 @@
       color:var(--muted);
       font-size:14px;
     }
+
+    footer{
+      margin-top:14px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.02);
+      box-shadow:0 18px 50px rgba(0,0,0,.25);
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:rgba(233,238,252,.86);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .tiny{
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+      line-height:1.6;
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="brand">Stellar Lift</div>
-      <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: <strong>14 December 2025</strong></p>
-    </div>
-  </header>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/" aria-label="Stellar Lift home">
+        <div class="brandLogo" aria-hidden="true">
+          <img src="/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
+        </div>
+        <div>
+          <div class="brandName">Stellar Lift</div>
+          <p>Track. Improve. Repeat.</p>
+        </div>
+      </a>
 
-  <main class="wrap">
-    <div class="card">
-      <p>
-        This Privacy Policy explains how <strong>Antczak Enterprise International</strong> (“we”, “us”, “our”)
-        collects, uses, and shares information when you use our websites and mobile applications under the
-        <strong>Stellar Lift</strong> brand (the “Services”).
-      </p>
+      <nav aria-label="Navigation">
+        <a class="btn" href="/">Home</a>
+        <a class="btn" href="/about/">About</a>
+        <a class="btn" href="/support/">Support</a>
+        <a class="btn" href="/terms/">Terms</a>
+        <a class="btn primary" href="/privacy/">Privacy</a>
+      </nav>
+    </header>
 
-      <h2>What we collect</h2>
-      <p class="muted">We aim to collect as little personal data as possible. Depending on the app and features you use, we may process:</p>
-      <ul>
-        <li><strong>Account data (if you create or use an account)</strong>: email address and authentication data (e.g., login tokens) used to sign you in and secure your account.</li>
-        <li><strong>Fitness and app data you enter</strong>: workouts, routines, hydration entries, goals, and similar tracking data stored on your device and/or synced if you use account-enabled features.</li>
-        <li><strong>Technical data</strong>: device model, OS version, app version, language, time zone, approximate location (country/region), and diagnostic logs.</li>
-        <li><strong>Usage data</strong>: screens viewed, feature interactions, and performance events (e.g., crashes).</li>
-        <li><strong>Advertising data (only in apps that show ads)</strong>: the advertising ID and ad interaction events, processed by our advertising partners.</li>
-      </ul>
-
-      <div class="callout">
-        Note: Some Stellar Lift apps may run web content inside the app (WebView). In such cases, hosting providers may process IP address and request logs for security and reliability.
+    <section class="section">
+      <div class="sectionHead">
+        <h1 class="heroTitle">Privacy Policy</h1>
+        <p class="meta">Effective date: <strong>14 December 2025</strong></p>
       </div>
 
-      <h2>Third-party services</h2>
-      <p class="muted">
-        Some parts of our Services rely on third-party providers. These providers may collect and process technical, usage, and advertising-related data to deliver their services.
-      </p>
-      <ul>
-        <li><strong>Google Play</strong> (distribution, vitals, crash reporting within Play).</li>
-        <li><strong>Google AdMob</strong> (only in apps that display ads).</li>
-        <li><strong>Hosting/provider services</strong> used to deliver web content inside the app (for example, web app hosting). These services typically process IP address and request logs for security and reliability.</li>
-      </ul>
-      <p class="muted">
-        Third-party providers are responsible for their own privacy practices. Where applicable, you can review Google’s policies here:
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
-      </p>
+      <div class="sectionBody">
+        <div class="card">
+          <p class="lead">
+            This Privacy Policy explains how <strong>Antczak Enterprise International</strong> (“we”, “us”, “our”) collects, uses, and shares information when you use our websites and mobile applications under the <strong>Stellar Lift</strong> brand (the “Services”).
+          </p>
 
-      <h2>How we use information</h2>
-      <ul>
-        <li>To provide and maintain the Services (including account sign-in and security).</li>
-        <li>To improve performance and fix bugs (including crash diagnostics).</li>
-        <li>To protect against fraud, abuse, and security incidents.</li>
-        <li>To show ads and measure ad performance (only in apps that display ads).</li>
-      </ul>
+          <h2>What we collect</h2>
+          <p class="muted">We aim to collect as little personal data as possible. Depending on the app and features you use, we may process:</p>
+          <ul>
+            <li><strong>Account data (if you create or use an account)</strong>: email address and authentication data (e.g., login tokens) used to sign you in and secure your account.</li>
+            <li><strong>Fitness and app data you enter</strong>: workouts, routines, hydration entries, goals, and similar tracking data stored on your device and/or synced if you use account-enabled features.</li>
+            <li><strong>Technical data</strong>: device model, OS version, app version, language, time zone, approximate location (country/region), and diagnostic logs.</li>
+            <li><strong>Usage data</strong>: screens viewed, feature interactions, and performance events (e.g., crashes).</li>
+            <li><strong>Advertising data (only in apps that show ads)</strong>: the advertising ID and ad interaction events, processed by our advertising partners.</li>
+          </ul>
 
-      <h2>Data sharing</h2>
-      <p class="muted">
-        We do not sell your personal information. We may share limited data with:
-      </p>
-      <ul>
-        <li>Service providers (hosting, analytics/crash, ads where applicable) strictly to operate the Services.</li>
-        <li>Authorities, if required by law.</li>
-      </ul>
+          <div class="callout">
+            Note: Some Stellar Lift apps may run web content inside the app (WebView). In such cases, hosting providers may process IP address and request logs for security and reliability.
+          </div>
 
-      <h2>Data retention</h2>
-      <p>
-        We keep data only as long as needed for the purposes described above. Some diagnostic logs may be retained by third-party providers
-        according to their policies.
-      </p>
+          <h2>Third-party services</h2>
+          <p class="muted">
+            Some parts of our Services rely on third-party providers. These providers may collect and process technical, usage, and advertising-related data to deliver their services.
+          </p>
+          <ul>
+            <li><strong>Google Play</strong> (distribution, vitals, crash reporting within Play).</li>
+            <li><strong>Google AdMob</strong> (only in apps that display ads).</li>
+            <li><strong>Hosting/provider services</strong> used to deliver web content inside the app (for example, web app hosting). These services typically process IP address and request logs for security and reliability.</li>
+          </ul>
+          <p class="muted">
+            Third-party providers are responsible for their own privacy practices. Where applicable, you can review Google’s policies here:
+            <a class="link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+          </p>
 
-      <h2>Your choices</h2>
-      <ul>
-        <li>You can uninstall the app at any time to stop data collection by that app.</li>
-        <li>On Android, you can reset or limit the Advertising ID in system settings (affects apps that show ads).</li>
-        <li>If we use consent dialogs for ads/analytics in a specific app version, you will be able to manage your consent there (for example, via “Privacy options” in Settings, if available).</li>
-      </ul>
+          <h2>How we use information</h2>
+          <ul>
+            <li>To provide and maintain the Services, including account sign-in and security.</li>
+            <li>To improve performance and fix bugs, including crash diagnostics.</li>
+            <li>To protect against fraud, abuse, and security incidents.</li>
+            <li>To show ads and measure ad performance, only in apps that display ads.</li>
+          </ul>
 
-      <h2>Account deletion</h2>
-      <p>
-        If you have an account and want it deleted, email us at
-        <a href="mailto:office@antczak.co.uk">office@antczak.co.uk</a>
-        from the email address you used to register. We may need to verify your request before deletion.
-      </p>
+          <h2>Data sharing</h2>
+          <p class="muted">
+            We do not sell your personal information. We may share limited data with:
+          </p>
+          <ul>
+            <li>Service providers such as hosting, diagnostics, and ads where applicable, strictly to operate the Services.</li>
+            <li>Authorities, if required by law.</li>
+          </ul>
 
-      <h2>Children</h2>
-      <p>
-        Our Services are not intended for children under 13. We do not knowingly collect personal information from children.
-      </p>
+          <h2>Data retention</h2>
+          <p>
+            We keep data only as long as needed for the purposes described above. Some diagnostic logs may be retained by third-party providers according to their policies.
+          </p>
 
-      <h2>Contact</h2>
-      <p>
-        If you have questions about this Privacy Policy, contact us at:
-        <br>
-        <strong>Email:</strong>
-        <a href="mailto:office@antczak.co.uk">office@antczak.co.uk</a>
-      </p>
+          <h2>Your choices</h2>
+          <ul>
+            <li>You can uninstall the app at any time to stop data collection by that app.</li>
+            <li>On Android, you can reset or limit the Advertising ID in system settings, which affects apps that show ads.</li>
+            <li>If we use consent dialogs for ads or analytics in a specific app version, you will be able to manage your consent there, for example via “Privacy options” in Settings if available.</li>
+          </ul>
 
-      <h2>Changes to this policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. We will post the updated version on this page and update the effective date.
-      </p>
+          <h2>Account deletion</h2>
+          <p>
+            If you have an account and want it deleted, email us at
+            <a class="link" href="mailto:office@antczak.co.uk">office@antczak.co.uk</a>
+            from the email address you used to register. We may need to verify your request before deletion.
+          </p>
 
-      <footer>
-        © <span id="year"></span> Antczak Enterprise International — Stellar Lift
-      </footer>
-    </div>
-  </main>
+          <h2>Children</h2>
+          <p>
+            Our Services are not intended for children under 13. We do not knowingly collect personal information from children.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            If you have questions about this Privacy Policy, contact us at:
+            <br>
+            <strong>Email:</strong>
+            <a class="link" href="mailto:office@antczak.co.uk">office@antczak.co.uk</a>
+          </p>
+
+          <h2>Changes to this policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. We will post the updated version on this page and update the effective date.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Antczak Enterprise International — Stellar Lift</div>
+      <div class="tiny">
+        <a class="link" href="/">Home</a>
+        · <a class="link" href="/about/">About</a>
+        · <a class="link" href="/support/">Support</a>
+        · <a class="link" href="/terms/">Terms</a>
+        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
+      </div>
+    </footer>
+  </div>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
