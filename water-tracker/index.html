@@ -3,12 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Water Tracker — Drink Reminder | Stellar Lift</title>
-  <meta name="description" content="Water Tracker — Drink Reminder by Stellar Lift. A simple hydration tracking app built for reminders, quick logging, and daily consistency." />
+  <title>Water Tracker — Drink Reminder | Simple Hydration App by Stellar Lift</title>
+  <meta name="description" content="Water Tracker — Drink Reminder by Stellar Lift is a simple hydration app built for quick logging, reminder support, daily goals, and better consistency." />
+  <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://stellarliftapp.com/water-tracker/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Water Tracker — Drink Reminder | Stellar Lift" />
+  <meta property="og:description" content="A simple hydration app built for quick logging, reminder support, daily goals, and better consistency." />
+  <meta property="og:url" content="https://stellarliftapp.com/water-tracker/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Water Tracker — Drink Reminder | Stellar Lift" />
+  <meta name="twitter:description" content="A simple hydration app built for quick logging, reminder support, daily goals, and better consistency." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    window.openPrivacySettings = function(event) {
+      if (event) event.preventDefault();
+
+      if (
+        window.googlefc &&
+        typeof window.googlefc.showRevocationMessage === 'function'
+      ) {
+        window.googlefc.showRevocationMessage();
+      }
+
+      return false;
+    };
+
+    window.googlefc.callbackQueue.push({
+      CONSENT_API_READY: function () {
+        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+          link.hidden = false;
+          link.setAttribute('aria-hidden', 'false');
+        });
+      }
+    });
+  </script>
 
   <style>
     :root{
@@ -16,10 +56,12 @@
       --text:#e7eef7;
       --muted:#9ab0c7;
       --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.14);
       --accent:#ffb000;
       --shadow:0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
       --link:#7db4ff;
+      --max:1040px;
     }
 
     *{box-sizing:border-box}
@@ -42,14 +84,15 @@
       pointer-events:none;
       z-index:-1;
       background:
-        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%);
+        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%),
+        linear-gradient(180deg, #07101a 0%, #0b0f14 100%);
     }
 
-    a{color:inherit; text-decoration:none}
+    a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline}
-    img{max-width:100%; height:auto; display:block}
+    img{max-width:100%;height:auto;display:block}
 
-    .wrap{max-width:980px; margin:0 auto; padding:24px 18px 54px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 54px}
 
     header{
       display:flex;
@@ -85,10 +128,11 @@
       display:block;
     }
 
-    .brand h1{
+    .brandName{
       font-size:18px;
       margin:0;
       letter-spacing:.2px;
+      font-weight:800;
     }
 
     .brand p{
@@ -114,7 +158,7 @@
       border-radius:999px;
       background:rgba(255,255,255,.04);
       backdrop-filter:blur(8px);
-      transition:transform .12s ease, border-color .12s ease, background .12s ease;
+      transition:transform .12s ease,border-color .12s ease,background .12s ease;
       font-weight:800;
       font-size:13px;
       white-space:nowrap;
@@ -153,7 +197,7 @@
       margin:0 0 14px;
       color:var(--muted);
       font-size:14px;
-      max-width:85ch;
+      max-width:92ch;
     }
 
     .sectionBody{
@@ -166,9 +210,30 @@
       margin:0;
     }
 
+    .heroTitle{
+      margin:0 0 10px;
+      font-size:clamp(26px, 3.2vw, 40px);
+      line-height:1.12;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .subLead{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      max-width:92ch;
+    }
+
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .three{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
       gap:14px;
     }
 
@@ -205,7 +270,7 @@
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:14px;
+      margin-top:16px;
     }
 
     .cta{
@@ -257,10 +322,12 @@
       color:var(--muted);
       font-weight:800;
       font-size:13px;
+      line-height:1.6;
     }
 
-    @media (max-width: 800px){
+    @media (max-width: 900px){
       .grid{grid-template-columns:1fr}
+      .three{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -272,14 +339,14 @@
           <img src="/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
         </div>
         <div>
-          <h1>Stellar Lift</h1>
-          <p>Simple trackers. Real progress.</p>
+          <div class="brandName">Stellar Lift</div>
+          <p>Track. Improve. Repeat.</p>
         </div>
       </a>
 
       <nav aria-label="Navigation">
         <a class="btn" href="/">Home</a>
-        <a class="btn" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
+        <a class="btn" href="/blog/">Blog</a>
         <a class="btn" href="/about/">About</a>
         <a class="btn" href="/support/">Support</a>
         <a class="btn" href="/why-hydration-tracking-matters/">Hydration guide</a>
@@ -289,57 +356,73 @@
 
     <section class="section">
       <div class="sectionHead">
-        <h2>Water Tracker — Drink Reminder</h2>
-        <p>A simple hydration tracking app built for reminders, quick logging, and daily consistency.</p>
+        <h1 class="heroTitle">Water Tracker — Drink Reminder: simple hydration tracking for daily consistency</h1>
+        <p class="subLead">
+          Water Tracker — Drink Reminder is a hydration app designed for people who want quick logging, practical reminders, visible daily goals, and a cleaner way to stay consistent with water intake.
+        </p>
       </div>
       <div class="sectionBody">
         <p class="lead">
-          Water Tracker — Drink Reminder is designed to make hydration tracking fast and easy. Instead of adding friction, the app focuses on simple reminders, quick water logging, and a cleaner daily routine that is easier to maintain over time.
+          Many hydration apps either feel too basic to be useful or too cluttered to use comfortably every day. Water Tracker is built around a simpler middle ground:
+          make logging fast, keep reminders practical, and make the daily routine easier to repeat.
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          The point is not to turn hydration into a complicated task. The point is to make it visible, easy, and consistent enough that users can actually stick with it over time.
         </p>
         <div class="ctaRow">
           <a class="cta primary" href="https://play.google.com/store/apps/details?id=com.stellarlift.watertracker" target="_blank" rel="noopener">Open in Google Play</a>
-          <a class="cta" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Read the blog</a>
+          <a class="cta" href="/why-hydration-tracking-matters/">Read the hydration guide</a>
+          <a class="cta" href="/blog/">Visit the blog</a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>What it is for</h3>
-        <p>Built for people who want a cleaner way to stay on top of hydration.</p>
+        <h2>What Water Tracker is for</h2>
+        <p>Built for users who want a clearer and more practical way to stay on top of hydration.</p>
       </div>
       <div class="sectionBody">
         <ul class="list">
           <li>Logging water intake quickly during the day.</li>
-          <li>Using reminders to stay more consistent with hydration.</li>
-          <li>Keeping daily water goals visible and easy to follow.</li>
-          <li>Making hydration tracking simple enough to stick with.</li>
+          <li>Using reminders to support more consistent hydration habits.</li>
+          <li>Keeping daily intake goals visible and easier to follow.</li>
+          <li>Reducing friction around a simple daily health habit.</li>
+          <li>Making hydration tracking light enough to use long term.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Why it is different</h3>
-        <p>The app focuses on usability instead of overcomplication.</p>
+        <h2>Why the app is different</h2>
+        <p>The focus is usability and consistency instead of unnecessary complexity.</p>
       </div>
       <div class="sectionBody">
         <div class="grid">
           <div class="card">
             <h4>Quick logging</h4>
-            <p>The app is designed to keep water tracking fast so it feels easy to use throughout the day.</p>
+            <p>
+              The app is built to keep hydration logging fast enough that it fits naturally into the day.
+            </p>
           </div>
           <div class="card">
             <h4>Reminder-based consistency</h4>
-            <p>Reminders are there to support the habit, not overwhelm the user with unnecessary complexity.</p>
+            <p>
+              Reminders are there to support habit-building without turning the app into a noisy or overwhelming system.
+            </p>
           </div>
           <div class="card">
             <h4>Cleaner daily routine</h4>
-            <p>The app keeps hydration visible without turning it into a complicated process.</p>
+            <p>
+              Water intake stays visible and trackable without forcing users through a complicated workflow.
+            </p>
           </div>
           <div class="card">
             <h4>Part of the Stellar Lift ecosystem</h4>
-            <p>It fits into a wider set of focused tools designed around simple health and fitness tracking.</p>
+            <p>
+              The app sits inside a wider ecosystem of focused tools and practical content around hydration, training, and recovery.
+            </p>
           </div>
         </div>
       </div>
@@ -347,30 +430,64 @@
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Who it is for</h3>
-        <p>A practical option for people who want hydration tracking without clutter.</p>
+        <h2>Who Water Tracker is for</h2>
+        <p>A practical choice for users who want hydration tracking without clutter.</p>
       </div>
       <div class="sectionBody">
-        <ul class="list">
-          <li>People trying to improve daily water intake.</li>
-          <li>Users who benefit from simple reminders.</li>
-          <li>Anyone who wants a lightweight hydration app.</li>
-          <li>People who prefer focused tools over bloated all-in-one apps.</li>
-        </ul>
+        <div class="three">
+          <div class="card">
+            <h4>People improving daily water intake</h4>
+            <p>
+              Useful for users who want a clearer way to stay aware of how much they are drinking during the day.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Users who benefit from reminders</h4>
+            <p>
+              A good fit for people who know they forget to drink regularly and want light reminder support.
+            </p>
+          </div>
+          <div class="card">
+            <h4>People who prefer focused apps</h4>
+            <p>
+              Better suited to users who want a lightweight hydration tool instead of a bloated all-in-one wellness app.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Related reading</h3>
-        <p>More hydration-related content from Stellar Lift.</p>
+        <h2>How it fits into the wider ecosystem</h2>
+        <p>Water Tracker is one part of the broader Stellar Lift direction.</p>
+      </div>
+      <div class="sectionBody">
+        <p class="lead">
+          Stellar Lift is being built as a group of focused tools rather than one oversized platform. Water Tracker covers hydration tracking, while other parts of the ecosystem support workout logging, recovery-related reading, and practical educational content through the blog.
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          That makes this page more than a store link. It sits inside a wider structure of product pages, support pages, practical guides, and connected content built around the same users and habits.
+        </p>
+        <p style="margin-top:14px;">
+          <a class="link" href="/why-hydration-tracking-matters/">Why hydration tracking matters</a><br>
+          <a class="link" href="/how-the-stellar-lift-ecosystem-works/">How the Stellar Lift ecosystem works</a><br>
+          <a class="link" href="/blog/">Stellar Lift Blog</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>Related reading</h2>
+        <p>More hydration-related content connected to this part of the ecosystem.</p>
       </div>
       <div class="sectionBody">
         <ul class="list">
           <li><a class="link" href="/why-hydration-tracking-matters/">Why Hydration Tracking Matters</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/sweat-rate-vs-sodium-loss-after-training/" target="_blank" rel="noopener">Sweat Rate vs Sodium Loss: What to Measure After Hard Training</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/how-much-water-before-during-after-workout/" target="_blank" rel="noopener">How Much Water to Drink When Training (Before, During, After)</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/electrolytes-for-workouts/" target="_blank" rel="noopener">Electrolytes for Workouts: When You Need Them (and When You Don’t)</a></li>
+          <li><a class="link" href="/hydration/">Hydration hub</a></li>
+          <li><a class="link" href="/training/">Training hub</a></li>
+          <li><a class="link" href="/blog/">Browse all blog posts</a></li>
         </ul>
       </div>
     </section>
@@ -378,11 +495,12 @@
     <footer>
       <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
       <div class="tiny">
-        Blog: <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">blog.stellarliftapp.com</a>
+        <a class="link" href="/blog/">Blog</a>
         · <a class="link" href="/about/">About</a>
         · <a class="link" href="/support/">Support</a>
         · <a class="link" href="/terms/">Terms</a>
         · <a class="link" href="/why-hydration-tracking-matters/">Hydration guide</a>
+        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
       </div>
     </footer>
   </div>
