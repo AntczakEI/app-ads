@@ -3,12 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Training Tracker | Stellar Lift</title>
-  <meta name="description" content="Training Tracker by Stellar Lift — a simple workout logging app built for consistency, speed, and real progress." />
+  <title>Training Tracker | Simple Workout Logging App by Stellar Lift</title>
+  <meta name="description" content="Training Tracker by Stellar Lift is a simple workout logging app built for faster tracking, better consistency, and a cleaner training workflow." />
+  <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://stellarliftapp.com/training-tracker/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Training Tracker | Stellar Lift" />
+  <meta property="og:description" content="A simple workout logging app built for faster tracking, better consistency, and a cleaner training workflow." />
+  <meta property="og:url" content="https://stellarliftapp.com/training-tracker/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Training Tracker | Stellar Lift" />
+  <meta name="twitter:description" content="A simple workout logging app built for faster tracking, better consistency, and a cleaner training workflow." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    window.googlefc = window.googlefc || {};
+    window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+
+    window.openPrivacySettings = function(event) {
+      if (event) event.preventDefault();
+
+      if (
+        window.googlefc &&
+        typeof window.googlefc.showRevocationMessage === 'function'
+      ) {
+        window.googlefc.showRevocationMessage();
+      }
+
+      return false;
+    };
+
+    window.googlefc.callbackQueue.push({
+      CONSENT_API_READY: function () {
+        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+          link.hidden = false;
+          link.setAttribute('aria-hidden', 'false');
+        });
+      }
+    });
+  </script>
 
   <style>
     :root{
@@ -16,10 +56,12 @@
       --text:#e7eef7;
       --muted:#9ab0c7;
       --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.14);
       --accent:#ffb000;
       --shadow:0 20px 60px rgba(0,0,0,.45);
       --radius:18px;
       --link:#7db4ff;
+      --max:1040px;
     }
 
     *{box-sizing:border-box}
@@ -42,14 +84,15 @@
       pointer-events:none;
       z-index:-1;
       background:
-        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%);
+        radial-gradient(1100px 700px at 18% -10%, rgba(255,176,0,.22), transparent 62%),
+        linear-gradient(180deg, #07101a 0%, #0b0f14 100%);
     }
 
-    a{color:inherit; text-decoration:none}
+    a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline}
-    img{max-width:100%; height:auto; display:block}
+    img{max-width:100%;height:auto;display:block}
 
-    .wrap{max-width:980px; margin:0 auto; padding:24px 18px 54px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 54px}
 
     header{
       display:flex;
@@ -85,10 +128,11 @@
       display:block;
     }
 
-    .brand h1{
+    .brandName{
       font-size:18px;
       margin:0;
       letter-spacing:.2px;
+      font-weight:800;
     }
 
     .brand p{
@@ -114,7 +158,7 @@
       border-radius:999px;
       background:rgba(255,255,255,.04);
       backdrop-filter:blur(8px);
-      transition:transform .12s ease, border-color .12s ease, background .12s ease;
+      transition:transform .12s ease,border-color .12s ease,background .12s ease;
       font-weight:800;
       font-size:13px;
       white-space:nowrap;
@@ -153,7 +197,7 @@
       margin:0 0 14px;
       color:var(--muted);
       font-size:14px;
-      max-width:85ch;
+      max-width:92ch;
     }
 
     .sectionBody{
@@ -166,9 +210,30 @@
       margin:0;
     }
 
+    .heroTitle{
+      margin:0 0 10px;
+      font-size:clamp(26px, 3.2vw, 40px);
+      line-height:1.12;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .subLead{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      max-width:92ch;
+    }
+
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .three{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
       gap:14px;
     }
 
@@ -205,7 +270,7 @@
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:14px;
+      margin-top:16px;
     }
 
     .cta{
@@ -257,10 +322,12 @@
       color:var(--muted);
       font-weight:800;
       font-size:13px;
+      line-height:1.6;
     }
 
-    @media (max-width: 800px){
+    @media (max-width: 900px){
       .grid{grid-template-columns:1fr}
+      .three{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -272,14 +339,14 @@
           <img src="/assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
         </div>
         <div>
-          <h1>Stellar Lift</h1>
-          <p>Simple trackers. Real progress.</p>
+          <div class="brandName">Stellar Lift</div>
+          <p>Track. Improve. Repeat.</p>
         </div>
       </a>
 
       <nav aria-label="Navigation">
         <a class="btn" href="/">Home</a>
-        <a class="btn" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Blog</a>
+        <a class="btn" href="/blog/">Blog</a>
         <a class="btn" href="/about/">About</a>
         <a class="btn" href="/support/">Support</a>
         <a class="btn" href="/how-to-track-workouts/">Workout guide</a>
@@ -289,57 +356,73 @@
 
     <section class="section">
       <div class="sectionHead">
-        <h2>Training Tracker</h2>
-        <p>A simple workout logging app built for speed, consistency, and real training progress.</p>
+        <h1 class="heroTitle">Training Tracker: simple workout logging built for consistency</h1>
+        <p class="subLead">
+          Training Tracker is a workout logging app designed for people who want a cleaner, faster way to record sessions, follow routines, and stay consistent without getting buried in unnecessary features.
+        </p>
       </div>
       <div class="sectionBody">
         <p class="lead">
-          Training Tracker is designed for people who want to log workouts quickly without dealing with bloated features, overcomplicated setup, or unnecessary friction. The goal is simple: make it easier to train consistently and keep a clear record of progress.
+          A lot of training apps try to do everything at once. That often means too many menus, too much setup, and too much friction between finishing a set and actually logging it.
+          Training Tracker takes a simpler route. The app is built around fast workout logging, practical structure, and a cleaner day-to-day experience.
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          The point is not to turn training into admin work. The point is to make it easier to keep a useful record of what you are doing so consistency, progression, and habit-building are easier to maintain over time.
         </p>
         <div class="ctaRow">
           <a class="cta primary" href="https://play.google.com/store/apps/details?id=com.stellarlift.trainingtracker" target="_blank" rel="noopener">Open in Google Play</a>
-          <a class="cta" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">Read the blog</a>
+          <a class="cta" href="/how-to-track-workouts/">Read the workout guide</a>
+          <a class="cta" href="/blog/">Visit the blog</a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>What it is for</h3>
-        <p>Built for people who want clean workout logging without noise.</p>
+        <h2>What Training Tracker is for</h2>
+        <p>Built for users who want straightforward training logs instead of bloated all-in-one systems.</p>
       </div>
       <div class="sectionBody">
         <ul class="list">
           <li>Logging workouts quickly and clearly.</li>
-          <li>Tracking consistency over time.</li>
-          <li>Keeping a simple record of exercises, sessions, and progress.</li>
+          <li>Keeping a usable record of exercises, sessions, and training patterns.</li>
+          <li>Supporting consistency through a simpler workflow.</li>
           <li>Reducing friction between training and tracking.</li>
+          <li>Helping users stay organised without overcomplicating the process.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Why it is different</h3>
-        <p>The app focuses on usefulness, not feature overload.</p>
+        <h2>Why the app is different</h2>
+        <p>The focus is practical use, not feature overload.</p>
       </div>
       <div class="sectionBody">
         <div class="grid">
           <div class="card">
             <h4>Fast by design</h4>
-            <p>The app is built around fast logging so tracking supports your training instead of slowing it down.</p>
+            <p>
+              The app is built around quicker logging so tracking supports training instead of interrupting it.
+            </p>
           </div>
           <div class="card">
             <h4>Less clutter</h4>
-            <p>Training Tracker avoids the heavy, overbuilt feel that often makes fitness apps harder to use consistently.</p>
+            <p>
+              Training Tracker avoids the heavy, overbuilt feel that often makes fitness apps harder to use consistently.
+            </p>
           </div>
           <div class="card">
             <h4>Consistency first</h4>
-            <p>It is designed around the idea that simple systems are easier to stick with over the long term.</p>
+            <p>
+              Simpler systems are often easier to stick with long term, especially when the goal is regular training rather than constant app management.
+            </p>
           </div>
           <div class="card">
-            <h4>Part of a wider ecosystem</h4>
-            <p>The app is part of Stellar Lift, a growing set of focused tools built around simple progress tracking.</p>
+            <h4>Part of the Stellar Lift ecosystem</h4>
+            <p>
+              The app sits inside a wider ecosystem of focused tools and practical content around training, hydration, and recovery.
+            </p>
           </div>
         </div>
       </div>
@@ -347,29 +430,64 @@
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Who it is for</h3>
-        <p>A practical choice for people who want a straightforward training log.</p>
+        <h2>Who Training Tracker is for</h2>
+        <p>A practical option for users who want a cleaner and more focused workout log.</p>
       </div>
       <div class="sectionBody">
-        <ul class="list">
-          <li>Gym users who want a simple workout log.</li>
-          <li>People building consistency with strength training.</li>
-          <li>Users who prefer focused tools over all-in-one fitness apps.</li>
-          <li>Anyone who wants a cleaner way to record training sessions.</li>
-        </ul>
+        <div class="three">
+          <div class="card">
+            <h4>Gym users</h4>
+            <p>
+              Useful for people who want a simple way to log strength sessions, routines, and day-to-day workout activity.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Consistency-focused users</h4>
+            <p>
+              A good fit for people trying to build regular training habits without adding friction to the process.
+            </p>
+          </div>
+          <div class="card">
+            <h4>People who prefer focused apps</h4>
+            <p>
+              Better suited to users who want a clean single-purpose tool rather than one giant app that tries to do everything.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="sectionHead">
-        <h3>Related reading</h3>
-        <p>More training-related content from Stellar Lift.</p>
+        <h2>How it fits into the wider ecosystem</h2>
+        <p>Training Tracker is one part of the broader Stellar Lift direction.</p>
+      </div>
+      <div class="sectionBody">
+        <p class="lead">
+          Stellar Lift is being built as a set of focused tools instead of one overloaded platform. Training Tracker covers workout logging, while other parts of the ecosystem focus on hydration, recovery content, and practical guidance through the blog.
+        </p>
+        <p class="lead" style="margin-top:14px;">
+          That makes the site more than just a download page. The product page, support pages, guides, and blog content all connect around the same use cases and audience.
+        </p>
+        <p style="margin-top:14px;">
+          <a class="link" href="/how-the-stellar-lift-ecosystem-works/">How the Stellar Lift ecosystem works</a><br>
+          <a class="link" href="/water-tracker/">Water Tracker — Drink Reminder</a><br>
+          <a class="link" href="/blog/">Stellar Lift Blog</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionHead">
+        <h2>Related reading</h2>
+        <p>More training-related content connected to this part of the ecosystem.</p>
       </div>
       <div class="sectionBody">
         <ul class="list">
           <li><a class="link" href="/how-to-track-workouts/">How to Track Workouts</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/core-training-for-fighters/" target="_blank" rel="noopener">Core Training for Fighters</a></li>
-          <li><a class="link" href="https://blog.stellarliftapp.com/rest-day-vs-active-recovery/" target="_blank" rel="noopener">Rest Day vs Active Recovery: What Your Body Actually Needs</a></li>
+          <li><a class="link" href="/training/">Training hub</a></li>
+          <li><a class="link" href="/recovery/">Recovery hub</a></li>
+          <li><a class="link" href="/blog/">Browse all blog posts</a></li>
         </ul>
       </div>
     </section>
@@ -377,11 +495,12 @@
     <footer>
       <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
       <div class="tiny">
-        Blog: <a class="link" href="https://blog.stellarliftapp.com" target="_blank" rel="noopener">blog.stellarliftapp.com</a>
+        <a class="link" href="/blog/">Blog</a>
         · <a class="link" href="/about/">About</a>
         · <a class="link" href="/support/">Support</a>
         · <a class="link" href="/terms/">Terms</a>
         · <a class="link" href="/how-to-track-workouts/">Workout guide</a>
+        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
       </div>
     </footer>
   </div>
