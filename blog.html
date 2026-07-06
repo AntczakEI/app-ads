@@ -80,9 +80,14 @@ permalink: /blog/
   </p>
 </section>
 
-{% assign featured_posts = site.posts | where_exp: "post", "post.featured_training == true or post.featured_hydration == true or post.featured_recovery == true" | sort: "last_modified_at" | reverse %}
+{% assign featured_count = 0 %}
+{% for post in site.posts %}
+  {% if post.featured_training or post.featured_hydration or post.featured_recovery %}
+    {% assign featured_count = featured_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-{% if featured_posts and featured_posts.size > 0 %}
+{% if featured_count > 0 %}
 <section class="section">
   <h2>Recently updated</h2>
   <p class="section-intro">
@@ -90,52 +95,13 @@ permalink: /blog/
   </p>
 
   <div class="grid">
-    {% for post in featured_posts %}
-      <article class="card">
-        {% if post.categories and post.categories.size > 0 %}
-          <div class="card-meta">Updated {{ post.categories[0] | capitalize }} Guide</div>
-        {% else %}
-          <div class="card-meta">Updated Article</div>
-        {% endif %}
-
-        <h3 class="card-title">
-          <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
-            {{ post.title }}
-          </a>
-        </h3>
-
-        {% if post.description %}
-          <p class="card-desc">{{ post.description }}</p>
-        {% else %}
-          <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-        {% endif %}
-
-        <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
-          {% if post.last_modified_at %}
-            Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
-          {% else %}
-            Published {{ post.date | date: "%Y-%m-%d" }}
-          {% endif %}
-        </p>
-      </article>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
-<section class="section">
-  <h2>All articles</h2>
-
-  {% assign regular_posts = site.posts | where_exp: "post", "post.featured_training != true and post.featured_hydration != true and post.featured_recovery != true" %}
-
-  {% if regular_posts and regular_posts.size > 0 %}
-    <div class="grid">
-      {% for post in regular_posts %}
+    {% for post in site.posts %}
+      {% if post.featured_training or post.featured_hydration or post.featured_recovery %}
         <article class="card">
           {% if post.categories and post.categories.size > 0 %}
-            <div class="card-meta">{{ post.categories[0] }}</div>
+            <div class="card-meta">Updated {{ post.categories[0] | capitalize }} Guide</div>
           {% else %}
-            <div class="card-meta">Article</div>
+            <div class="card-meta">Updated Article</div>
           {% endif %}
 
           <h3 class="card-title">
@@ -154,10 +120,58 @@ permalink: /blog/
             {% if post.last_modified_at %}
               Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
             {% else %}
-              {{ post.date | date: "%Y-%m-%d" }}
+              Published {{ post.date | date: "%Y-%m-%d" }}
             {% endif %}
           </p>
         </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <h2>All articles</h2>
+
+  {% assign regular_count = 0 %}
+  {% for post in site.posts %}
+    {% unless post.featured_training or post.featured_hydration or post.featured_recovery %}
+      {% assign regular_count = regular_count | plus: 1 %}
+    {% endunless %}
+  {% endfor %}
+
+  {% if regular_count > 0 %}
+    <div class="grid">
+      {% for post in site.posts %}
+        {% unless post.featured_training or post.featured_hydration or post.featured_recovery %}
+          <article class="card">
+            {% if post.categories and post.categories.size > 0 %}
+              <div class="card-meta">{{ post.categories[0] }}</div>
+            {% else %}
+              <div class="card-meta">Article</div>
+            {% endif %}
+
+            <h3 class="card-title">
+              <a href="{{ post.url | relative_url }}" style="text-decoration:none;">
+                {{ post.title }}
+              </a>
+            </h3>
+
+            {% if post.description %}
+              <p class="card-desc">{{ post.description }}</p>
+            {% else %}
+              <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            {% endif %}
+
+            <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
+              {% if post.last_modified_at %}
+                Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+              {% else %}
+                {{ post.date | date: "%Y-%m-%d" }}
+              {% endif %}
+            </p>
+          </article>
+        {% endunless %}
       {% endfor %}
     </div>
   {% else %}
