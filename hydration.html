@@ -53,13 +53,52 @@ permalink: /hydration/
   </p>
 </section>
 
+{% assign featured_hydration_posts = site.posts | where_exp: "post", "post.categories contains 'hydration' and post.featured_hydration == true" | sort: "last_modified_at" | reverse %}
+
+{% if featured_hydration_posts and featured_hydration_posts.size > 0 %}
+<section class="section">
+  <h2>Recently updated</h2>
+  <p class="section-intro">
+    Recently improved hydration guides with updated structure, clearer examples, and more practical advice.
+  </p>
+
+  <div class="grid">
+    {% for post in featured_hydration_posts %}
+      <article class="card">
+        <div class="card-meta">Updated Hydration Guide</div>
+
+        <h3 class="card-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h3>
+
+        {% if post.description %}
+          <p class="card-desc">{{ post.description }}</p>
+        {% else %}
+          <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% endif %}
+
+        <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
+          {% if post.last_modified_at %}
+            Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+          {% else %}
+            Published {{ post.date | date: "%Y-%m-%d" }}
+          {% endif %}
+        </p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <h2>All Hydration articles</h2>
   <p class="section-intro">
     Browse all hydration content published on Stellar Lift Blog, including water intake, electrolytes, sweat loss, hydration habits, and practical strategies for daily life and training.
   </p>
 
-  {% assign hydration_posts = site.posts | where_exp: "post", "post.categories contains 'hydration'" %}
+  {% assign hydration_posts = site.posts | where_exp: "post", "post.categories contains 'hydration' and post.featured_hydration != true" %}
 
   {% if hydration_posts and hydration_posts.size > 0 %}
     <div class="grid">
@@ -80,7 +119,11 @@ permalink: /hydration/
           {% endif %}
 
           <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
-            {{ post.date | date: "%Y-%m-%d" }}
+            {% if post.last_modified_at %}
+              Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+            {% else %}
+              {{ post.date | date: "%Y-%m-%d" }}
+            {% endif %}
           </p>
         </article>
       {% endfor %}
