@@ -55,13 +55,52 @@ permalink: /recovery/
   </p>
 </section>
 
+{% assign featured_recovery_posts = site.posts | where_exp: "post", "post.categories contains 'recovery' and post.featured_recovery == true" | sort: "last_modified_at" | reverse %}
+
+{% if featured_recovery_posts and featured_recovery_posts.size > 0 %}
+<section class="section">
+  <h2>Recently updated</h2>
+  <p class="section-intro">
+    Recently improved recovery guides with updated structure, clearer examples, and more practical advice.
+  </p>
+
+  <div class="grid">
+    {% for post in featured_recovery_posts %}
+      <article class="card">
+        <div class="card-meta">Updated Recovery Guide</div>
+
+        <h3 class="card-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h3>
+
+        {% if post.description %}
+          <p class="card-desc">{{ post.description }}</p>
+        {% else %}
+          <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% endif %}
+
+        <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
+          {% if post.last_modified_at %}
+            Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+          {% else %}
+            Published {{ post.date | date: "%Y-%m-%d" }}
+          {% endif %}
+        </p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <h2>All Recovery articles</h2>
   <p class="section-intro">
     Browse all recovery content published on Stellar Lift Blog, including soreness management, mobility, recovery routines, sleep-related basics, and practical ways to recover better between training sessions.
   </p>
 
-  {% assign recovery_posts = site.posts | where_exp: "post", "post.categories contains 'recovery'" %}
+  {% assign recovery_posts = site.posts | where_exp: "post", "post.categories contains 'recovery' and post.featured_recovery != true" %}
 
   {% if recovery_posts and recovery_posts.size > 0 %}
     <div class="grid">
@@ -82,7 +121,11 @@ permalink: /recovery/
           {% endif %}
 
           <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
-            {{ post.date | date: "%Y-%m-%d" }}
+            {% if post.last_modified_at %}
+              Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+            {% else %}
+              {{ post.date | date: "%Y-%m-%d" }}
+            {% endif %}
           </p>
         </article>
       {% endfor %}
