@@ -1,15 +1,15 @@
 ---
-
 layout: post
 title: "Best 2-Day Full Body Gym Workout for Muay Thai Fighters"
 date: 2026-03-05
 last_modified_at: 2026-07-06
+featured_training: true
 categories: [training]
 tags: [training, muay thai, strength training, fighters, gym plan, full body workout, recovery, progression]
 permalink: /training/muay-thai-strength-training-program-2-days-week/
 excerpt: "A practical 2-day full body gym workout for Muay Thai fighters who want strength, power, and better performance without ruining skill training or recovery."
 description: "A practical 2-day full body gym workout for Muay Thai fighters. Full weekly plan, exercises, sets, reps, progression, and scheduling tips that won’t ruin your kicks."
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Best 2-Day Full Body Gym Workout for Muay Thai Fighters
 
