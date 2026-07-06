@@ -54,9 +54,16 @@ permalink: /training/
   </p>
 </section>
 
-{% assign featured_training_posts = site.posts | where_exp: "post", "post.categories contains 'training' and post.featured_training == true" | sort: "last_modified_at" | reverse %}
+{% assign featured_count = 0 %}
+{% for post in site.posts %}
+  {% if post.categories contains 'training' %}
+    {% if post.featured_training %}
+      {% assign featured_count = featured_count | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
-{% if featured_training_posts and featured_training_posts.size > 0 %}
+{% if featured_count > 0 %}
 <section class="section">
   <h2>Recently updated</h2>
   <p class="section-intro">
@@ -64,30 +71,34 @@ permalink: /training/
   </p>
 
   <div class="grid">
-    {% for post in featured_training_posts %}
-      <article class="card">
-        <div class="card-meta">Updated Training Guide</div>
+    {% for post in site.posts %}
+      {% if post.categories contains 'training' %}
+        {% if post.featured_training %}
+          <article class="card">
+            <div class="card-meta">Updated Training Guide</div>
 
-        <h3 class="card-title">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
-        </h3>
+            <h3 class="card-title">
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+              </a>
+            </h3>
 
-        {% if post.description %}
-          <p class="card-desc">{{ post.description }}</p>
-        {% else %}
-          <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            {% if post.description %}
+              <p class="card-desc">{{ post.description }}</p>
+            {% else %}
+              <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            {% endif %}
+
+            <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
+              {% if post.last_modified_at %}
+                Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+              {% else %}
+                Published {{ post.date | date: "%Y-%m-%d" }}
+              {% endif %}
+            </p>
+          </article>
         {% endif %}
-
-        <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
-          {% if post.last_modified_at %}
-            Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
-          {% else %}
-            Published {{ post.date | date: "%Y-%m-%d" }}
-          {% endif %}
-        </p>
-      </article>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
@@ -99,34 +110,45 @@ permalink: /training/
     Browse all training content published on Stellar Lift Blog, including workout structure, progression, programming basics, exercise selection, and practical ways to stay consistent.
   </p>
 
-  {% assign training_posts = site.posts | where_exp: "post", "post.categories contains 'training' and post.featured_training != true" %}
+  {% assign normal_count = 0 %}
+  {% for post in site.posts %}
+    {% if post.categories contains 'training' %}
+      {% unless post.featured_training %}
+        {% assign normal_count = normal_count | plus: 1 %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
 
-  {% if training_posts and training_posts.size > 0 %}
+  {% if normal_count > 0 %}
     <div class="grid">
-      {% for post in training_posts %}
-        <article class="card">
-          <div class="card-meta">Training</div>
+      {% for post in site.posts %}
+        {% if post.categories contains 'training' %}
+          {% unless post.featured_training %}
+            <article class="card">
+              <div class="card-meta">Training</div>
 
-          <h3 class="card-title">
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title }}
-            </a>
-          </h3>
+              <h3 class="card-title">
+                <a href="{{ post.url | relative_url }}">
+                  {{ post.title }}
+                </a>
+              </h3>
 
-          {% if post.description %}
-            <p class="card-desc">{{ post.description }}</p>
-          {% else %}
-            <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-          {% endif %}
+              {% if post.description %}
+                <p class="card-desc">{{ post.description }}</p>
+              {% else %}
+                <p class="card-desc">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+              {% endif %}
 
-          <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
-            {% if post.last_modified_at %}
-              Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
-            {% else %}
-              {{ post.date | date: "%Y-%m-%d" }}
-            {% endif %}
-          </p>
-        </article>
+              <p style="margin-top:10px;color:rgba(255,255,255,.55);font-size:13px;">
+                {% if post.last_modified_at %}
+                  Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}
+                {% else %}
+                  {{ post.date | date: "%Y-%m-%d" }}
+                {% endif %}
+              </p>
+            </article>
+          {% endunless %}
+        {% endif %}
       {% endfor %}
     </div>
   {% else %}
