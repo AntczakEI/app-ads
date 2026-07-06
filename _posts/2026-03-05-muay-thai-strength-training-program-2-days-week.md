@@ -11,8 +11,6 @@ excerpt: "A practical 2-day full body gym workout for Muay Thai fighters who wan
 description: "A practical 2-day full body gym workout for Muay Thai fighters. Full weekly plan, exercises, sets, reps, progression, and scheduling tips that won’t ruin your kicks."
 ---
 
-# Best 2-Day Full Body Gym Workout for Muay Thai Fighters
-
 <p class="post-updated"><strong>Updated:</strong> July 6, 2026</p>
 
 If you train Muay Thai, you **do not** need a bodybuilding split.
@@ -170,14 +168,14 @@ The goal is to build a strong base without creating so much soreness that Muay T
 
 ## Day A workout
 
-| Exercise                             | Sets |         Reps |
-| ------------------------------------ | ---: | -----------: |
-| Main lower-body lift                 |  3–4 |          3–6 |
-| Upper-body push                      |    3 |          6–8 |
-| Upper-body pull                      |    3 |         6–10 |
-| Single-leg strength                  |  2–3 | 6–8 per side |
-| Core anti-rotation or anti-extension |  2–3 |         6–12 |
-| Optional carry                       |  2–3 | 20–40 meters |
+| Exercise | Sets | Reps |
+|---|---:|---:|
+| Main lower-body lift | 3–4 | 3–6 |
+| Upper-body push | 3 | 6–8 |
+| Upper-body pull | 3 | 6–10 |
+| Single-leg strength | 2–3 | 6–8 per side |
+| Core anti-rotation or anti-extension | 2–3 | 6–12 |
+| Optional carry | 2–3 | 20–40 meters |
 
 ## 1. Main lower-body lift
 
@@ -271,15 +269,15 @@ The goal is to train power, posterior-chain strength, pulling, pressing, trunk c
 
 ## Day B workout
 
-| Exercise                                    | Sets |                 Reps |
-| ------------------------------------------- | ---: | -------------------: |
-| Power movement                              |  3–5 |                 3–12 |
-| Hinge-pattern strength                      |    3 |                 5–10 |
-| Vertical pull                               |    3 |                 4–12 |
-| Landmine or overhead press                  |  2–3 |                 6–10 |
-| Hamstring, adductor, or knee support        |  2–3 |        8–12 or timed |
-| Core and trunk control                      |  2–3 | 20–40 sec or carries |
-| Optional shoulder, neck, or posture support |  1–2 |                12–20 |
+| Exercise | Sets | Reps |
+|---|---:|---:|
+| Power movement | 3–5 | 3–12 |
+| Hinge-pattern strength | 3 | 5–10 |
+| Vertical pull | 3 | 4–12 |
+| Landmine or overhead press | 2–3 | 6–10 |
+| Hamstring, adductor, or knee support | 2–3 | 8–12 or timed |
+| Core and trunk control | 2–3 | 20–40 sec or carries |
+| Optional shoulder, neck, or posture support | 1–2 | 12–20 |
 
 ## 1. Power movement
 
