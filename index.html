@@ -3,26 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Stellar Lift — Simple Trackers for Training and Hydration</title>
-  <meta name="description" content="Stellar Lift is a focused ecosystem of simple tracking apps and practical blog content for hydration, training, and recovery." />
+
+  <title>Stellar Lift — Training, Hydration & Recovery</title>
+  <meta name="description" content="Practical guides for training, hydration and recovery, supported by two focused tracking apps: Training Tracker and Water Tracker." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b0f14" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <meta name="google-adsense-account" content="ca-pub-3802348795219382" />
-  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://stellarliftapp.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Stellar Lift — Simple Trackers for Training and Hydration" />
-  <meta property="og:description" content="Simple apps and practical blog content for hydration, training, and recovery." />
+  <meta property="og:site_name" content="Stellar Lift" />
+  <meta property="og:title" content="Stellar Lift — Training, Hydration & Recovery" />
+  <meta property="og:description" content="Practical guides for training, hydration and recovery, supported by two focused tracking apps." />
   <meta property="og:url" content="https://stellarliftapp.com/" />
+  <meta property="og:image" content="https://stellarliftapp.com/assets/images/stellar-lift-hero.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Stellar Lift — Simple Trackers for Training and Hydration" />
-  <meta name="twitter:description" content="Simple apps and practical blog content for hydration, training, and recovery." />
+  <meta name="twitter:title" content="Stellar Lift — Training, Hydration & Recovery" />
+  <meta name="twitter:description" content="Practical guides for training, hydration and recovery, supported by two focused tracking apps." />
+  <meta name="twitter:image" content="https://stellarliftapp.com/assets/images/stellar-lift-hero.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script>
     window.googlefc = window.googlefc || {};
@@ -33,7 +38,7 @@
 
       if (
         window.googlefc &&
-        typeof window.googlefc.showRevocationMessage === 'function'
+        typeof window.googlefc.showRevocationMessage === "function"
       ) {
         window.googlefc.showRevocationMessage();
       }
@@ -43,895 +48,1590 @@
 
     window.googlefc.callbackQueue.push({
       CONSENT_API_READY: function () {
-        document.querySelectorAll('[data-privacy-settings-link]').forEach(function (link) {
+        document.querySelectorAll("[data-privacy-settings-link]").forEach(function (link) {
           link.hidden = false;
-          link.setAttribute('aria-hidden', 'false');
+          link.setAttribute("aria-hidden", "false");
         });
       }
     });
   </script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3802348795219382"
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3802348795219382"
     crossorigin="anonymous"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDVLQ1QYLZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FDVLQ1QYLZ');
+    gtag("js", new Date());
+    gtag("config", "G-FDVLQ1QYLZ");
   </script>
 
   <style>
     :root{
       --bg:#0b0f14;
+      --bg-deep:#070a0f;
       --panel:#10161f;
-      --panel-2:#0f1520;
-      --text:#e7eef7;
-      --muted:#9ab0c7;
-      --line:rgba(255,255,255,.08);
-      --line-strong:rgba(255,255,255,.14);
+      --text:#e7edf6;
+      --muted:rgba(231,237,246,.70);
+      --muted-2:rgba(231,237,246,.52);
+      --line:rgba(255,255,255,.10);
+      --line-strong:rgba(255,255,255,.15);
       --accent:#ffb000;
+      --accent-2:#ff6a00;
       --accent-soft:rgba(255,176,0,.12);
-      --shadow:0 20px 60px rgba(0,0,0,.45);
-      --radius:18px;
-      --link:#8dbbff;
+      --blue:#69b9ff;
+      --shadow:0 24px 70px rgba(0,0,0,.42);
+      --radius:20px;
       --max:1160px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
-    html{background:var(--bg)}
+    html{scroll-behavior:smooth;background:var(--bg)}
 
     body{
       margin:0;
-      font-family:"Exo 2", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height:100vh;
+      font-family:"Exo 2",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
       color:var(--text);
-      line-height:1.6;
-      background:transparent;
-      position:relative;
-    }
-
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      z-index:-2;
       background:
-        radial-gradient(1100px 700px at 14% -10%, rgba(255,176,0,.22), transparent 62%),
-        radial-gradient(800px 500px at 110% 10%, rgba(80,120,255,.10), transparent 60%),
-        linear-gradient(180deg, #07101a 0%, #0b0f14 100%);
-      pointer-events:none;
+        radial-gradient(820px 520px at 11% -8%,rgba(255,176,0,.15),transparent 62%),
+        radial-gradient(720px 500px at 92% 12%,rgba(55,132,255,.08),transparent 64%),
+        linear-gradient(180deg,#08111b 0%,var(--bg) 42%,var(--bg-deep) 100%);
+      line-height:1.6;
     }
 
     a{color:inherit;text-decoration:none}
-    a:hover{text-decoration:underline}
-    img{max-width:100%;display:block;height:auto}
+    a:hover{text-decoration:none}
+    img{display:block;max-width:100%;height:auto}
 
-    .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 54px}
-    .section{margin-top:14px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));box-shadow:var(--shadow);overflow:hidden}
-    .section-head{padding:18px 20px 0}
-    .section-head h2,.section-head h3{margin:0 0 8px}
-    .section-head p{margin:0;color:var(--muted);font-size:14px;max-width:92ch}
-    .section-body{padding:18px 20px 20px}
+    .shell{
+      width:min(calc(100% - 36px),var(--max));
+      margin:0 auto;
+    }
 
-    header{
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid rgba(255,255,255,.07);
+      background:rgba(7,12,19,.80);
+      backdrop-filter:blur(16px);
+    }
+
+    .header-inner{
+      min-height:76px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
-      margin-bottom:16px;
+      gap:24px;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
-      min-width:240px;
+      gap:11px;
+      min-width:205px;
     }
 
     .brand-logo{
-      width:46px;
-      height:46px;
-      border-radius:14px;
+      width:44px;
+      height:44px;
+      border-radius:13px;
+      object-fit:cover;
       border:1px solid var(--line-strong);
-      background:rgba(255,255,255,.04);
-      overflow:hidden;
-      box-shadow:0 10px 30px rgba(0,0,0,.35);
-      flex:0 0 auto;
+      box-shadow:0 10px 26px rgba(0,0,0,.34);
     }
 
-    .brand-logo img{width:100%;height:100%;object-fit:cover}
-    .brand-name{font-size:19px;margin:0;letter-spacing:.2px;font-weight:800}
-    .brand p{margin:2px 0 0;font-size:13px;color:var(--muted)}
-
-    nav{
+    .brand-copy{
       display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      align-items:center;
+      flex-direction:column;
+      line-height:1.12;
     }
 
-    .btn{
+    .brand-name{
+      font-size:17px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+
+    .brand-tagline{
+      margin-top:4px;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:7px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
       display:inline-flex;
       align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:10px 14px;
-      border:1px solid var(--line);
+      min-height:38px;
+      padding:8px 12px;
       border-radius:999px;
-      background:rgba(255,255,255,.04);
-      backdrop-filter:blur(8px);
-      transition:transform .12s ease,border-color .12s ease,background .12s ease;
-      font-weight:800;
+      border:1px solid transparent;
+      color:rgba(231,237,246,.78);
       font-size:13px;
-      white-space:nowrap;
+      font-weight:700;
+      transition:.16s ease;
     }
 
-    .btn:hover{
+    .nav-link:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background:rgba(255,255,255,.035);
       transform:translateY(-1px);
-      border-color:rgba(255,255,255,.16);
-      background:rgba(255,255,255,.06)
     }
 
-    .btn.primary{
-      border-color:rgba(255,176,0,.35);
-      background:rgba(255,176,0,.12);
+    .nav-link.primary{
+      color:#16120b;
+      border-color:rgba(255,176,0,.50);
+      background:linear-gradient(135deg,#ffc247,var(--accent));
+      box-shadow:0 8px 28px rgba(255,176,0,.12);
     }
 
-    .hero-image{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+    .nav-link.primary:hover{
+      color:#16120b;
+      background:linear-gradient(135deg,#ffca61,#ffb51a);
+    }
+
+    main{
+      padding:26px 0 54px;
+    }
+
+    .hero{
+      position:relative;
+      min-height:500px;
+      display:flex;
+      align-items:center;
       overflow:hidden;
-      background:rgba(255,255,255,.02);
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      background:#07101a;
+      isolation:isolate;
     }
 
-    .hero-text{
-      margin-top:12px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-      box-shadow:0 18px 50px rgba(0,0,0,.30);
-      padding:20px 20px 18px;
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4,9,15,.92) 0%,
+          rgba(4,9,15,.68) 37%,
+          rgba(4,9,15,.10) 66%,
+          rgba(4,9,15,.02) 100%
+        ),
+        url("/assets/images/stellar-lift-hero.png") center center/cover no-repeat;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.02),
+        rgba(0,0,0,.18)
+      );
+      pointer-events:none;
+    }
+
+    .hero-content{
+      width:min(540px,56%);
+      padding:52px 50px;
     }
 
     .eyebrow{
       display:inline-flex;
       align-items:center;
-      gap:10px;
+      gap:9px;
+      margin-bottom:14px;
+      color:rgba(255,194,71,.94);
+      font-size:11px;
       font-weight:800;
-      font-size:12px;
-      letter-spacing:.35px;
-      color:rgba(231,238,247,.86);
-      margin-bottom:8px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
     }
 
-    .dot{
+    .eyebrow::before{
+      content:"";
       width:7px;
       height:7px;
-      border-radius:999px;
-      background:rgba(255,176,0,.85);
-      box-shadow:0 0 18px rgba(255,176,0,.35);
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 18px rgba(255,176,0,.48);
     }
 
-    .hero-title{
-      margin:0 0 8px;
-      font-weight:900;
-      letter-spacing:.2px;
-      line-height:1.1;
-      font-size:clamp(22px, 2.6vw, 34px);
+    h1,h2,h3,p{
+      margin-top:0;
     }
 
-    .motto{
-      margin:0;
-      font-weight:900;
-      letter-spacing:.3px;
-      line-height:1.05;
-      font-size:clamp(30px, 4vw, 56px);
+    .hero h1{
+      max-width:520px;
+      margin-bottom:16px;
+      font-size:clamp(31px,3.3vw,42px);
+      line-height:1.08;
+      letter-spacing:-.02em;
+      font-weight:800;
     }
 
-    .hero-sub{
-      margin:12px 0 0;
-      color:var(--muted);
-      max-width:95ch;
+    .hero-copy{
+      max-width:525px;
+      margin-bottom:0;
+      color:rgba(231,237,246,.74);
       font-size:15px;
+      line-height:1.75;
     }
 
-    .hero-ctas{
-      margin-top:16px;
+    .hero-actions{
+      margin-top:24px;
       display:flex;
       gap:10px;
       flex-wrap:wrap;
     }
 
-    .pill{
+    .button{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:10px 14px;
+      min-height:43px;
+      padding:10px 15px;
       border-radius:12px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-      font-weight:900;
+      border:1px solid var(--line-strong);
+      background:rgba(255,255,255,.055);
+      color:rgba(231,237,246,.92);
       font-size:13px;
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+      font-weight:800;
+      transition:.16s ease;
     }
 
-    .pill:hover{
+    .button:hover{
       transform:translateY(-1px);
+      border-color:rgba(255,255,255,.22);
       background:rgba(255,255,255,.08);
-      border-color:rgba(255,255,255,.18)
     }
 
-    .pill.primary{
-      border-color:rgba(255,176,0,.38);
-      background:rgba(255,176,0,.14)
+    .button.primary{
+      color:#17120a;
+      border-color:rgba(255,176,0,.60);
+      background:linear-gradient(135deg,#ffc34c,var(--accent));
+      box-shadow:0 12px 30px rgba(255,176,0,.13);
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:14px;
+    .button.primary:hover{
+      background:linear-gradient(135deg,#ffcc68,#ffb51c);
     }
 
-    .card{
-      grid-column:span 6;
+    .hero-note{
+      margin-top:18px;
+      color:rgba(231,237,246,.50);
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .section{
+      margin-top:22px;
+      padding:28px;
       border:1px solid var(--line);
       border-radius:var(--radius);
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-      box-shadow:0 18px 50px rgba(0,0,0,.35);
-      overflow:hidden;
-      position:relative;
-      min-height:220px;
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.040),
+        rgba(255,255,255,.020)
+      );
+      box-shadow:0 18px 55px rgba(0,0,0,.25);
     }
 
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:-60px -60px auto auto;
-      width:220px;
-      height:220px;
-      background:radial-gradient(circle, rgba(255,176,0,.20), transparent 60%);
-      pointer-events:none;
-    }
-
-    .card-inner{
-      padding:18px 18px 14px;
+    .section-heading{
       display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:22px;
+      margin-bottom:20px;
+    }
+
+    .section-heading-copy{
+      max-width:760px;
+    }
+
+    .section-kicker{
+      margin-bottom:7px;
+      color:rgba(255,176,0,.88);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    .section h2{
+      margin-bottom:7px;
+      font-size:clamp(22px,2.3vw,28px);
+      line-height:1.18;
+      font-weight:800;
+      letter-spacing:-.01em;
+    }
+
+    .section-intro{
+      margin-bottom:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .quiet-link{
+      flex:0 0 auto;
+      color:rgba(255,205,109,.90);
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .quiet-link:hover{
+      color:#ffe0a2;
+    }
+
+    .latest-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:14px;
+    }
+
+    .article-card{
+      position:relative;
+      min-height:206px;
+      padding:19px;
+      display:flex;
+      flex-direction:column;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:17px;
+      background:
+        radial-gradient(
+          260px 150px at 100% 0%,
+          rgba(255,176,0,.08),
+          transparent 70%
+        ),
+        rgba(4,9,15,.38);
+      transition:.16s ease;
+    }
+
+    .article-card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,176,0,.24);
+      background:
+        radial-gradient(
+          280px 170px at 100% 0%,
+          rgba(255,176,0,.12),
+          transparent 70%
+        ),
+        rgba(7,13,21,.55);
+    }
+
+    .article-meta{
+      margin-bottom:10px;
+      color:rgba(255,176,0,.78);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .article-card h3{
+      margin-bottom:9px;
+      font-size:17px;
+      line-height:1.30;
+      font-weight:750;
+    }
+
+    .article-card h3 a:hover{
+      color:#ffd784;
+    }
+
+    .article-card p{
+      margin-bottom:18px;
+      color:rgba(231,237,246,.64);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .article-read{
+      margin-top:auto;
+      color:rgba(255,205,109,.92);
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .pillars-visual{
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.09);
+      background:#050b12;
+    }
+
+    .pillars-visual img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+    }
+
+    .pillar-links{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .pillar-link{
+      padding:14px 15px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.09);
+      background:rgba(0,0,0,.18);
+      transition:.16s ease;
+    }
+
+    .pillar-link:hover{
+      transform:translateY(-1px);
+      border-color:rgba(255,176,0,.22);
+      background:rgba(255,255,255,.035);
+    }
+
+    .pillar-label strong{
+      display:block;
+      margin-bottom:3px;
+      font-size:14px;
+    }
+
+    .pillar-label span{
+      display:block;
+      color:var(--muted-2);
+      font-size:11px;
+    }
+
+    .pillar-arrow{
+      color:var(--accent);
+      font-size:17px;
+    }
+
+    .apps-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+
+    .app-card{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      background:
+        radial-gradient(
+          300px 190px at 100% 0%,
+          rgba(255,176,0,.085),
+          transparent 68%
+        ),
+        rgba(4,9,15,.38);
+      transition:.16s ease;
+    }
+
+    .app-card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,176,0,.23);
+    }
+
+    .app-top{
+      display:flex;
+      gap:15px;
       align-items:flex-start;
     }
 
     .app-icon{
-      width:64px;
-      height:64px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
+      width:60px;
+      height:60px;
+      flex:0 0 60px;
       overflow:hidden;
-      flex:0 0 auto;
-      box-shadow:0 10px 24px rgba(0,0,0,.25);
+      border-radius:16px;
+      border:1px solid var(--line-strong);
+      background:rgba(255,255,255,.05);
+      box-shadow:0 12px 30px rgba(0,0,0,.28);
     }
 
-    .app-icon img{width:100%;height:100%;object-fit:cover}
-
-    .meta h3,.meta h4{
-      margin:0 0 6px;
-      font-size:17px;
+    .app-icon img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .meta p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
-    }
-
-    .badges{
-      margin-top:10px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(0,0,0,.18);
-      color:var(--muted);
-      font-size:12px;
+    .app-copy h3{
+      margin-bottom:6px;
+      font-size:18px;
+      line-height:1.25;
       font-weight:800;
     }
 
-    .actions{
-      padding:0 18px 18px;
+    .app-copy p{
+      margin-bottom:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .app-tags{
+      margin-top:15px;
       display:flex;
-      gap:10px;
+      flex-wrap:wrap;
+      gap:7px;
+    }
+
+    .tag{
+      padding:6px 9px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.09);
+      background:rgba(255,255,255,.025);
+      color:rgba(231,237,246,.60);
+      font-size:10px;
+      font-weight:700;
+    }
+
+    .app-actions{
+      margin-top:18px;
+      display:flex;
+      gap:9px;
       flex-wrap:wrap;
     }
 
-    .gp{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.05);
-      font-weight:900;
-      font-size:13px;
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+    .compact{
+      min-height:39px;
+      padding:8px 12px;
+      font-size:12px;
     }
 
-    .gp:hover{
-      transform:translateY(-1px);
-      background:rgba(255,255,255,.07);
-      border-color:rgba(255,255,255,.18)
-    }
-
-    .gp.primary{
-      border-color:rgba(255,176,0,.38);
-      background:rgba(255,176,0,.12)
-    }
-
-    .chart-img{
-      border-top:1px solid rgba(255,255,255,.06);
-      background:rgba(0,0,0,.2);
-    }
-
-    .two-cols{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-
-    .three-cols{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-    }
-
-    .mini-card{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:16px;
-      background:rgba(0,0,0,.16);
-      padding:16px;
-    }
-
-    .mini-card h3,.mini-card h4{
-      margin:0 0 8px;
-      font-size:15px;
-    }
-
-    .mini-card p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
-    }
-
-    .list{
-      margin:10px 0 0 18px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.6;
-    }
-
-    .list li{margin:6px 0}
-
-    .about-grid{
+    .direction-grid{
       display:grid;
       grid-template-columns:1.2fr .8fr;
-      gap:12px;
+      gap:14px;
     }
 
-    .callout{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:16px;
-      background:rgba(0,0,0,.18);
-      padding:16px;
+    .direction-card{
+      padding:20px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:17px;
+      background:rgba(0,0,0,.17);
     }
 
-    .callout-title{
-      margin:0 0 6px;
-      font-weight:900;
-      font-size:14px;
-      color:rgba(231,238,247,.92);
+    .direction-card h3{
+      margin-bottom:8px;
+      font-size:17px;
+      font-weight:800;
     }
 
-    .callout-text{
-      margin:0;
+    .direction-card p{
+      margin-bottom:0;
       color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
+      font-size:13px;
+      line-height:1.7;
     }
 
-    .link{
-      color:var(--link);
-      font-weight:900
+    .direction-points{
+      display:grid;
+      gap:10px;
     }
 
-    .link:hover{text-decoration:underline}
+    .direction-point{
+      padding:13px 14px;
+      border-radius:13px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.025);
+    }
 
-    footer{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.02);
-      box-shadow:0 18px 50px rgba(0,0,0,.25);
-      padding:16px 18px;
+    .direction-point strong{
+      display:block;
+      margin-bottom:2px;
+      color:rgba(231,237,246,.90);
+      font-size:12px;
+    }
+
+    .direction-point span{
+      color:var(--muted-2);
+      font-size:11px;
+    }
+
+    .site-footer{
+      padding:0 0 30px;
+    }
+
+    .footer-box{
+      padding:20px 22px;
       display:flex;
+      align-items:flex-start;
       justify-content:space-between;
-      gap:12px;
+      gap:26px;
       flex-wrap:wrap;
-      color:rgba(231,238,247,.86);
-      font-weight:800;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted-2);
+      font-size:12px;
+    }
+
+    .footer-brand strong{
+      display:block;
+      margin-bottom:4px;
+      color:rgba(231,237,246,.82);
       font-size:13px;
     }
 
-    .tiny{
-      color:var(--muted);
-      font-weight:800;
-      font-size:13px;
-      line-height:1.6;
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:8px 14px;
     }
 
-    @media (max-width: 980px){
-      .card{grid-column:span 12}
-      .three-cols{grid-template-columns:1fr}
-      .two-cols{grid-template-columns:1fr}
-      .about-grid{grid-template-columns:1fr}
+    .footer-links a:hover{
+      color:#ffd57c;
+    }
+
+    @media(max-width:900px){
+      .header-inner{
+        align-items:flex-start;
+        padding:14px 0;
+        flex-direction:column;
+        gap:12px;
+      }
+
+      .nav{
+        justify-content:flex-start;
+      }
+
+      .hero{
+        min-height:460px;
+      }
+
+      .hero-content{
+        width:64%;
+        padding:42px 36px;
+      }
+
+      .latest-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .latest-grid .article-card:last-child{
+        grid-column:1/-1;
+      }
+
+      .direction-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:680px){
+      .shell{
+        width:min(calc(100% - 24px),var(--max));
+      }
+
+      main{
+        padding-top:14px;
+      }
+
+      .brand-tagline{
+        display:none;
+      }
+
+      .nav{
+        gap:5px;
+      }
+
+      .nav-link{
+        min-height:34px;
+        padding:7px 9px;
+        font-size:11px;
+      }
+
+      .hero{
+        min-height:470px;
+        align-items:flex-end;
+      }
+
+      .hero::before{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(4,9,15,.12) 0%,
+            rgba(4,9,15,.26) 38%,
+            rgba(4,9,15,.94) 100%
+          ),
+          url("/assets/images/stellar-lift-hero.png") 67% center/cover no-repeat;
+      }
+
+      .hero-content{
+        width:100%;
+        padding:28px 22px;
+      }
+
+      .hero h1{
+        font-size:30px;
+        max-width:480px;
+      }
+
+      .hero-copy{
+        font-size:14px;
+      }
+
+      .section{
+        margin-top:14px;
+        padding:20px;
+      }
+
+      .section-heading{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:7px;
+      }
+
+      .section h2{
+        font-size:23px;
+      }
+
+      .latest-grid{
+        grid-template-columns:1fr;
+      }
+
+      .latest-grid .article-card:last-child{
+        grid-column:auto;
+      }
+
+      .pillar-links{
+        grid-template-columns:1fr;
+      }
+
+      .apps-grid{
+        grid-template-columns:1fr;
+      }
+
+      .pillars-visual img{
+        aspect-ratio:auto;
+        min-height:250px;
+        object-fit:cover;
+      }
+
+      .footer-box{
+        padding:18px 4px 0;
+      }
+
+      .footer-links{
+        justify-content:flex-start;
+      }
+    }
+
+    @media(max-width:430px){
+      .brand-logo{
+        width:40px;
+        height:40px;
+      }
+
+      .brand-name{
+        font-size:16px;
+      }
+
+      .hero{
+        min-height:500px;
+      }
+
+      .hero h1{
+        font-size:28px;
+      }
+
+      .hero-actions{
+        gap:8px;
+      }
+
+      .button{
+        width:100%;
+      }
+
+      .app-actions .button{
+        width:auto;
+        flex:1 1 140px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="#top" aria-label="Stellar Lift home">
-        <div class="brand-logo" aria-hidden="true">
-          <img src="assets/images/Main%20black%20logo.jpg" alt="Stellar Lift logo">
-        </div>
-        <div>
-          <div class="brand-name">Stellar Lift</div>
-          <p>Track. Improve. Repeat.</p>
-        </div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+
+      <a class="brand" href="/" aria-label="Stellar Lift home">
+        <img
+          class="brand-logo"
+          src="/assets/images/Main%20black%20logo.jpg"
+          alt="Stellar Lift logo"
+        />
+
+        <span class="brand-copy">
+          <span class="brand-name">Stellar Lift</span>
+          <span class="brand-tagline">Track. Improve. Repeat.</span>
+        </span>
       </a>
 
-      <nav aria-label="Navigation">
-        <a class="btn primary" href="#apps">Apps</a>
-        <a class="btn" href="/blog/">Blog</a>
-        <a class="btn" href="#roadmap">Roadmap</a>
-        <a class="btn" href="#about-site">About</a>
-        <a class="btn" href="#contact">Support</a>
-        <a class="btn" href="/terms/">Terms</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link primary" href="/blog/">Blog</a>
+        <a class="nav-link" href="/hydration/">Hydration</a>
+        <a class="nav-link" href="/training/">Training</a>
+        <a class="nav-link" href="/recovery/">Recovery</a>
+        <a class="nav-link" href="#apps">Apps</a>
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/support/">Support</a>
       </nav>
-    </header>
 
-    <section id="top" class="hero-image" aria-label="Stellar Lift banner">
-      <img src="assets/images/Main%20banner.jpg" alt="Stellar Lift banner" />
-    </section>
+    </div>
+  </header>
 
-    <section class="hero-text" aria-label="Intro">
-      <div class="eyebrow"><span class="dot" aria-hidden="true"></span> The Stellar Lift health ecosystem</div>
-      <h1 class="hero-title">Simple health tracking apps for training, hydration, and better daily consistency</h1>
-      <p class="motto">Track. Improve. Repeat.</p>
-      <p class="hero-sub">
-        Stellar Lift is a focused ecosystem of simple apps and practical content built for people who want useful tools without clutter.
-        The live products currently focus on training and hydration, while the blog supports them with clear, practical guidance on hydration,
-        training, and recovery.
-      </p>
+  <main>
+    <div class="shell">
 
-      <div class="hero-ctas">
-        <a class="pill primary" href="#apps">See apps</a>
-        <a class="pill" href="/blog/">Visit the blog</a>
-        <a class="pill" href="/privacy/">Privacy Policy</a>
-        <a class="pill" href="/account-deletion/">Account deletion</a>
-        <a class="pill" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
-      </div>
-    </section>
+      <section class="hero" aria-label="Stellar Lift introduction">
+        <div class="hero-content">
 
-    <section class="section" aria-label="What you will find here">
-      <div class="section-head">
-        <h2>What you will find on this site</h2>
-        <p>This is more than an app landing page. The site combines product information, support pages, privacy resources, and practical educational content through the Stellar Lift blog.</p>
-      </div>
-      <div class="section-body">
-        <div class="three-cols">
-          <div class="mini-card">
-            <h3>Simple tracking apps</h3>
-            <p>Focused tools designed to keep logging fast and friction low, with a clear “open → log → done” approach instead of bloated all-in-one complexity.</p>
+          <div class="eyebrow">
+            Training · Hydration · Recovery
           </div>
-          <div class="mini-card">
-            <h3>Practical blog content</h3>
-            <p>Articles covering hydration, training, and recovery in a direct, useful style aimed at real-world habits, workouts, and consistency.</p>
+
+          <h1>
+            Practical guidance for training, hydration and recovery.
+          </h1>
+
+          <p class="hero-copy">
+            Stellar Lift focuses on useful content you can actually apply —
+            from Muay Thai and training habits to hydration and recovery.
+            Two focused tracking apps support the same simple approach
+            without unnecessary clutter.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="/blog/">
+              Explore the blog
+            </a>
+
+            <a class="button" href="#apps">
+              See the apps
+            </a>
           </div>
-          <div class="mini-card">
-            <h3>Support and legal resources</h3>
-            <p>Contact details, support routes, privacy pages, account deletion information, and policy pages that explain how the ecosystem works.</p>
+
+          <div class="hero-note">
+            Practical content first. Simple tools where they help.
           </div>
+
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="apps" aria-label="Apps">
-      <div class="grid">
-        <article class="card">
-          <div class="card-inner">
-            <div class="app-icon" aria-hidden="true">
-              <img src="assets/images/LogoTT.png" alt="Training Tracker icon">
-            </div>
-            <div class="meta">
-              <h3><a href="/training-tracker/">Training Tracker</a></h3>
-              <p>Training Tracker is built for people who want a cleaner way to log workouts, follow routines, and keep consistency without getting buried in unnecessary menus.</p>
-              <div class="badges">
-                <span class="badge">Workout logging</span>
-                <span class="badge">Routine support</span>
-                <span class="badge">Simple & fast</span>
-              </div>
-            </div>
-          </div>
-          <div class="actions">
-            <a class="gp primary" href="https://play.google.com/store/apps/details?id=com.stellarlift.trainingtracker" target="_blank" rel="noopener">Open in Google Play</a>
-            <a class="gp" href="/training-tracker/">Learn more</a>
-          </div>
-        </article>
 
-        <article class="card">
-          <div class="card-inner">
-            <div class="app-icon" aria-hidden="true">
-              <img src="assets/images/LogoWT.png" alt="Water Tracker icon">
-            </div>
-            <div class="meta">
-              <h3><a href="/water-tracker/">Water Tracker — Drink Reminder</a></h3>
-              <p>Water Tracker helps users stay consistent with hydration through simple logging, reminders, and an approach designed around everyday use rather than overcomplicated setup.</p>
-              <div class="badges">
-                <span class="badge">Reminders</span>
-                <span class="badge">Daily goals</span>
-                <span class="badge">Quick logging</span>
-              </div>
-            </div>
-          </div>
-          <div class="actions">
-            <a class="gp" href="https://play.google.com/store/apps/details?id=com.stellarlift.watertracker" target="_blank" rel="noopener">Open in Google Play</a>
-            <a class="gp" href="/water-tracker/">Learn more</a>
-          </div>
-        </article>
-      </div>
-    </section>
+      <section
+        class="section"
+        id="latest"
+        aria-label="Latest from the blog"
+      >
 
-    <section class="section" aria-label="Who this site is for">
-      <div class="section-head">
-        <h2>Who this site is for</h2>
-        <p>The Stellar Lift ecosystem is aimed at people who value simplicity, consistency, and practical guidance over feature overload.</p>
-      </div>
-      <div class="section-body">
-        <div class="two-cols">
-          <div class="mini-card">
-            <h3>Good fit for</h3>
-            <ul class="list">
-              <li>People who train regularly and want a faster workout logging process.</li>
-              <li>People trying to stay more consistent with hydration.</li>
-              <li>Users who prefer focused apps instead of one giant “do everything badly” app.</li>
-              <li>Readers looking for direct, practical content on hydration, training, and recovery.</li>
-            </ul>
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+            <div class="section-kicker">
+              Latest from Stellar Lift
+            </div>
+
+            <h2>
+              Fresh practical reads
+            </h2>
+
+            <p class="section-intro">
+              New articles on training, hydration and recovery,
+              with an increasing focus on combat-sport training
+              and real-world consistency.
+            </p>
           </div>
-          <div class="mini-card">
-            <h3>What this site tries to avoid</h3>
-            <ul class="list">
-              <li>Bloated app flows that make tracking feel like admin work.</li>
-              <li>Generic wellness fluff with no practical use.</li>
-              <li>Feature overload that slows down simple daily habits.</li>
-              <li>Disconnected content that has no relationship to the products on the site.</li>
-            </ul>
-          </div>
+
+          <a class="quiet-link" href="/blog/">
+            View all articles →
+          </a>
+
         </div>
-      </div>
-    </section>
 
-    <section id="roadmap" class="section" aria-label="Roadmap">
-      <div class="section-head">
-        <h2>Product roadmap</h2>
-        <p>Two apps are live today, while the wider Stellar Lift ecosystem is being built as a longer-term set of focused tools.</p>
-      </div>
-      <div class="chart-img">
-        <img
-          src="assets/images/CHART2%20%28Canva%20konto%20AE%29.png"
-          alt="Stellar Lift ecosystem roadmap chart">
-      </div>
-    </section>
+        <div id="latest-blog-grid" class="latest-grid">
 
-    <section id="about-site" class="section" aria-label="Why this site exists">
-      <div class="section-head">
-        <h2>Why this site exists</h2>
-        <p>The goal is not to look like a giant health platform. The goal is to make simple, useful tools and back them up with content that actually helps people use them better.</p>
-      </div>
-      <div class="section-body">
-        <div class="about-grid">
-          <div class="mini-card">
-            <h3>The idea behind Stellar Lift</h3>
+          <article class="article-card">
+            <div class="article-meta">
+              Blog
+            </div>
+
+            <h3>
+              Loading latest articles...
+            </h3>
+
             <p>
-              Many health and fitness apps try to do everything, then become slow, cluttered, and annoying to use.
-              Stellar Lift takes the opposite route: focused apps, clear scope, and practical content that supports the actual use case.
+              The newest Stellar Lift posts are being loaded automatically.
             </p>
-
-            <ul class="list">
-              <li><strong>Single-purpose apps</strong> keep each tool lighter and easier to use.</li>
-              <li><strong>Speed-first design</strong> matters because friction kills habits.</li>
-              <li><strong>Practical blog content</strong> supports hydration, training, and recovery with useful articles instead of filler.</li>
-              <li><strong>Clear support and privacy pages</strong> help users understand how the site and products work.</li>
-            </ul>
-
-            <p style="margin-top:14px;">
-              <a class="link" href="/about/">Read more about Stellar Lift</a><br>
-              <a class="link" href="/how-the-stellar-lift-ecosystem-works/">How the ecosystem works</a>
-            </p>
-          </div>
-
-          <div class="callout">
-            <div class="callout-title">Live now</div>
-            <p class="callout-text">
-              Training Tracker and Water Tracker are currently live. The wider ecosystem is being built around the same principle: focused tools that stay simple.
-            </p>
-
-            <div style="height:12px"></div>
-
-            <div class="callout-title">Why separate apps?</div>
-            <p class="callout-text">
-              Separate apps make it easier to keep the experience fast, cleaner, and more relevant for the specific habit a user is tracking.
-            </p>
-
-            <div style="height:12px"></div>
-
-            <div class="callout-title">Why the blog matters</div>
-            <p class="callout-text">
-              The blog is part of the value of the site. It gives users practical context around hydration, training, and recovery rather than leaving the apps as isolated product pages.
-            </p>
-
-            <div style="height:14px"></div>
-
-            <a class="pill primary" href="/blog/" style="width:100%;text-align:center;">Explore the blog</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="latest-blog" class="section" aria-label="Latest from the blog">
-      <div class="section-head">
-        <h2>Latest from the blog</h2>
-        <p>The Stellar Lift blog focuses on practical topics connected to the ecosystem: hydration, training, and recovery.</p>
-      </div>
-      <div class="section-body">
-        <div class="three-cols" style="margin-bottom:14px;">
-          <div class="mini-card">
-            <h3>Hydration</h3>
-            <p>Simple, useful articles about daily hydration, workout hydration, and practical decision-making rather than vague advice.</p>
-          </div>
-          <div class="mini-card">
-            <h3>Training</h3>
-            <p>Articles focused on consistency, workout structure, and practical training choices that connect naturally with the app ecosystem.</p>
-          </div>
-          <div class="mini-card">
-            <h3>Recovery</h3>
-            <p>Useful content around soreness, mobility, fatigue management, and recovery habits that support regular training.</p>
-          </div>
-        </div>
-
-        <div id="latest-blog-grid" class="grid">
-          <article class="card">
-            <div class="card-inner">
-              <div class="meta">
-                <h3>Loading latest articles...</h3>
-                <p>Please wait while the latest blog posts are fetched automatically.</p>
-              </div>
-            </div>
           </article>
+
         </div>
 
-        <div class="two-cols" style="margin-top:14px;">
-          <div class="mini-card">
-            <h3>Start here</h3>
-            <p>
-              <a class="link" href="/blog/">Browse all blog articles</a><br>
-              <a class="link" href="/hydration/">Hydration hub</a><br>
-              <a class="link" href="/training/">Training hub</a><br>
-              <a class="link" href="/recovery/">Recovery hub</a>
-            </p>
-          </div>
-          <div class="mini-card">
-            <h3>Why this content exists</h3>
-            <p>
-              The blog is here to make the ecosystem more useful. It is not just filler around the apps. It gives users practical context, helps them make better decisions, and builds a clearer knowledge layer around the products.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" aria-label="Support and trust">
-      <div class="section-head">
-        <h2>Support, privacy, and site information</h2>
-        <p>This site also includes the pages users expect from a real product ecosystem: support, policy pages, and direct contact routes.</p>
-      </div>
-      <div class="section-body">
-        <div class="three-cols">
-          <div class="mini-card">
-            <h3>Support</h3>
-            <p>
-              Support questions, app issues, and general contact details are available through the site support and contact pages.
-            </p>
-            <p style="margin-top:12px;">
-              <a class="link" href="/support/">Support page</a><br>
-              <a class="link" href="/about/">About page</a>
-            </p>
-          </div>
-          <div class="mini-card">
-            <h3>Privacy and user controls</h3>
-            <p>
-              Privacy policy, account deletion information, and cookie/privacy choice controls are available for users who need them.
-            </p>
-            <p style="margin-top:12px;">
-              <a class="link" href="/privacy/">Privacy Policy</a><br>
-              <a class="link" href="/account-deletion/">Account deletion</a><br>
-              <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
-            </p>
-          </div>
-          <div class="mini-card">
-            <h3>Parent company</h3>
-            <p>
-              Stellar Lift is operated under Antczak Enterprise International, which provides the parent business structure behind the product brand.
-            </p>
-            <p style="margin-top:12px;">
-              <a class="link" href="https://www.antczak.co.uk" target="_blank" rel="noopener">Visit antczak.co.uk</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact" class="section" aria-label="Contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>For support, privacy questions, or product-related messages, use the details below.</p>
-      </div>
-      <div class="section-body">
-        <div class="two-cols">
-          <div class="mini-card">
-            <h3>Email</h3>
-            <p><a class="link" href="mailto:office@antczak.co.uk">office@antczak.co.uk</a></p>
-            <p style="margin-top:10px;">
-              For account deletion requests, use <a class="link" href="/account-deletion/">this page</a>. For general help, visit the <a class="link" href="/support/">support page</a>.
-            </p>
-          </div>
-          <div class="mini-card">
-            <h3>Useful links</h3>
-            <p>
-              <a class="link" href="/blog/">Stellar Lift Blog</a><br>
-              <a class="link" href="/terms/">Terms</a><br>
-              <a class="link" href="/privacy/">Privacy Policy</a><br>
-              <a class="link" href="/how-the-stellar-lift-ecosystem-works/">How the ecosystem works</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section
+        class="section"
+        aria-label="Explore Stellar Lift topics"
+      >
 
-    <footer>
-      <div>© <span id="y"></span> Stellar Lift — stellarliftapp.com</div>
-      <div class="tiny">
-        <a class="link" href="/blog/">Blog</a>
-        · <a class="link" href="/about/">About</a>
-        · <a class="link" href="/support/">Support</a>
-        · <a class="link" href="/terms/">Terms</a>
-        · <a class="link" href="/privacy/">Privacy Policy</a>
-        · <a class="link" href="/how-the-stellar-lift-ecosystem-works/">Ecosystem guide</a>
-        · <a class="link" href="#" data-privacy-settings-link hidden aria-hidden="true" onclick="return openPrivacySettings(event);">Privacy and cookie settings</a>
-        · Parent company: <a class="link" href="https://www.antczak.co.uk" target="_blank" rel="noopener">antczak.co.uk</a>
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+
+            <div class="section-kicker">
+              Three areas
+            </div>
+
+            <h2>
+              Hydration. Training. Recovery.
+            </h2>
+
+            <p class="section-intro">
+              Three connected areas, one practical approach:
+              train with purpose, stay consistent and recover
+              well enough to do it again.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="pillars-visual">
+          <img
+            src="/assets/images/stellar-lift-pillars.png"
+            alt="Stellar Lift hydration, training and recovery"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="pillar-links">
+
+          <a class="pillar-link" href="/hydration/">
+            <span class="pillar-label">
+              <strong>Hydration</strong>
+              <span>Daily habits, training and fluids</span>
+            </span>
+            <span class="pillar-arrow">→</span>
+          </a>
+
+          <a class="pillar-link" href="/training/">
+            <span class="pillar-label">
+              <strong>Training</strong>
+              <span>Muay Thai, strength and consistency</span>
+            </span>
+            <span class="pillar-arrow">→</span>
+          </a>
+
+          <a class="pillar-link" href="/recovery/">
+            <span class="pillar-label">
+              <strong>Recovery</strong>
+              <span>Fatigue, mobility and readiness</span>
+            </span>
+            <span class="pillar-arrow">→</span>
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <section
+        class="section"
+        id="apps"
+        aria-label="Stellar Lift apps"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+
+            <div class="section-kicker">
+              Focused tools
+            </div>
+
+            <h2>
+              Two apps. Kept deliberately simple.
+            </h2>
+
+            <p class="section-intro">
+              Training Tracker and Water Tracker remain the two
+              Stellar Lift apps, designed for quick everyday logging
+              rather than feature overload.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="apps-grid">
+
+          <article class="app-card">
+
+            <div class="app-top">
+
+              <div class="app-icon">
+                <img
+                  src="/assets/images/LogoTT.png"
+                  alt="Training Tracker icon"
+                />
+              </div>
+
+              <div class="app-copy">
+
+                <h3>
+                  Training Tracker
+                </h3>
+
+                <p>
+                  Log workouts, keep routines organised and follow
+                  your training without turning the process into admin.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="app-tags">
+              <span class="tag">Workout logging</span>
+              <span class="tag">Routine support</span>
+              <span class="tag">Fast workflow</span>
+            </div>
+
+            <div class="app-actions">
+
+              <a
+                class="button primary compact"
+                href="https://play.google.com/store/apps/details?id=com.stellarlift.trainingtracker"
+                target="_blank"
+                rel="noopener"
+              >
+                Google Play
+              </a>
+
+              <a
+                class="button compact"
+                href="/training-tracker/"
+              >
+                Learn more
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="app-card">
+
+            <div class="app-top">
+
+              <div class="app-icon">
+                <img
+                  src="/assets/images/LogoWT.png"
+                  alt="Water Tracker icon"
+                />
+              </div>
+
+              <div class="app-copy">
+
+                <h3>
+                  Water Tracker — Drink Reminder
+                </h3>
+
+                <p>
+                  Keep hydration visible with quick logging,
+                  daily goals and reminders designed around
+                  normal everyday use.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="app-tags">
+              <span class="tag">Drink reminders</span>
+              <span class="tag">Daily goals</span>
+              <span class="tag">Quick logging</span>
+            </div>
+
+            <div class="app-actions">
+
+              <a
+                class="button primary compact"
+                href="https://play.google.com/store/apps/details?id=com.stellarlift.watertracker"
+                target="_blank"
+                rel="noopener"
+              >
+                Google Play
+              </a>
+
+              <a
+                class="button compact"
+                href="/water-tracker/"
+              >
+                Learn more
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <section
+        class="section"
+        id="about"
+        aria-label="About Stellar Lift"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-heading-copy">
+
+            <div class="section-kicker">
+              Current direction
+            </div>
+
+            <h2>
+              A smaller product focus. A stronger content focus.
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="direction-grid">
+
+          <div class="direction-card">
+
+            <h3>
+              What Stellar Lift is now
+            </h3>
+
+            <p>
+              The main focus is the Stellar Lift blog: practical,
+              readable content around training, hydration and recovery,
+              with Muay Thai and combat-sport training forming an
+              important part of the training coverage. Training Tracker
+              and Water Tracker remain active as focused companion tools.
+            </p>
+
+          </div>
+
+          <div class="direction-points">
+
+            <div class="direction-point">
+              <strong>Blog-led</strong>
+              <span>
+                Useful content is the main growth direction.
+              </span>
+            </div>
+
+            <div class="direction-point">
+              <strong>Two apps</strong>
+              <span>
+                Training Tracker and Water Tracker stay focused.
+              </span>
+            </div>
+
+            <div class="direction-point">
+              <strong>No feature bloat</strong>
+              <span>
+                Simple tools and practical information remain the priority.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="shell footer-box">
+
+      <div class="footer-brand">
+
+        <strong>
+          Stellar Lift
+        </strong>
+
+        <span>
+          © <span id="year"></span> · Track. Improve. Repeat.
+        </span>
+
       </div>
-    </footer>
-  </div>
+
+
+      <nav
+        class="footer-links"
+        aria-label="Footer navigation"
+      >
+
+        <a href="/blog/">Blog</a>
+
+        <a href="/about/">About</a>
+
+        <a href="/support/">Support</a>
+
+        <a href="/terms/">Terms</a>
+
+        <a href="/privacy/">Privacy</a>
+
+        <a href="/account-deletion/">
+          Account deletion
+        </a>
+
+        <a
+          href="#"
+          data-privacy-settings-link
+          hidden
+          aria-hidden="true"
+          onclick="return openPrivacySettings(event);"
+        >
+          Privacy & cookie settings
+        </a>
+
+        <a
+          href="https://www.antczak.co.uk"
+          target="_blank"
+          rel="noopener"
+        >
+          Antczak Enterprise International
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
 
     (async function () {
-      const grid = document.getElementById("latest-blog-grid");
-      const feedUrl = "/feed.xml";
 
-      function escapeHtml(str) {
-        return String(str || "")
+      const grid =
+        document.getElementById("latest-blog-grid");
+
+
+      function escapeHtml(value) {
+
+        return String(value || "")
           .replace(/&/g, "&amp;")
           .replace(/</g, "&lt;")
           .replace(/>/g, "&gt;")
           .replace(/"/g, "&quot;")
           .replace(/'/g, "&#39;");
+
       }
+
 
       function stripHtml(html) {
-        const div = document.createElement("div");
-        div.innerHTML = html || "";
-        return (div.textContent || div.innerText || "").trim();
+
+        const div =
+          document.createElement("div");
+
+        div.innerHTML =
+          html || "";
+
+        return (
+          div.textContent ||
+          div.innerText ||
+          ""
+        ).trim();
+
       }
+
 
       function truncate(text, maxLength) {
+
         if (!text) return "";
-        if (text.length <= maxLength) return text;
-        return text.slice(0, maxLength).trimEnd() + "...";
+
+        if (text.length <= maxLength)
+          return text;
+
+        return (
+          text.slice(0, maxLength).trimEnd() +
+          "…"
+        );
+
       }
 
-      function getFirst(node, tagName) {
-        return node.getElementsByTagNameNS("*", tagName)[0] || null;
+
+      function firstByLocalName(node, localName) {
+
+        return (
+          node.getElementsByTagNameNS(
+            "*",
+            localName
+          )[0] || null
+        );
+
       }
 
-      function getText(node, tagName) {
-        const el = getFirst(node, tagName);
-        return el ? el.textContent.trim() : "";
+
+      function textByLocalName(node, localName) {
+
+        const element =
+          firstByLocalName(node, localName);
+
+        return element
+          ? element.textContent.trim()
+          : "";
+
       }
+
+
+      function formatDate(raw) {
+
+        if (!raw)
+          return "Latest article";
+
+        const date =
+          new Date(raw);
+
+        if (Number.isNaN(date.getTime()))
+          return "Latest article";
+
+        return date.toLocaleDateString(
+          "en-GB",
+          {
+            day:"numeric",
+            month:"short",
+            year:"numeric"
+          }
+        );
+
+      }
+
 
       try {
-        const response = await fetch(feedUrl, { cache: "no-store" });
-        if (!response.ok) throw new Error("Feed request failed");
 
-        const xmlText = await response.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(xmlText, "application/xml");
+        const response =
+          await fetch(
+            "/feed.xml",
+            {
+              cache:"no-store"
+            }
+          );
 
-        const entries = Array.from(xml.getElementsByTagNameNS("*", "entry")).slice(0, 3);
 
-        if (!entries.length) {
-          throw new Error("No entries found in feed");
-        }
+        if (!response.ok)
+          throw new Error(
+            "Feed request failed"
+          );
 
-        const cards = entries.map((entry, index) => {
-          const title = getText(entry, "title");
-          const summary = getText(entry, "summary");
-          const fallbackContent = getText(entry, "content");
-          const description = truncate(stripHtml(summary || fallbackContent), 170);
 
-          const linkEl = getFirst(entry, "link");
-          const url = linkEl ? linkEl.getAttribute("href") : "/blog/";
+        const xmlText =
+          await response.text();
 
-          const buttonClass = index === 0 ? "gp primary" : "gp";
 
-          return `
-            <article class="card">
-              <div class="card-inner">
-                <div class="meta">
-                  <h3><a href="${escapeHtml(url)}" rel="noopener">${escapeHtml(title)}</a></h3>
-                  <p>${escapeHtml(description)}</p>
+        const xml =
+          new DOMParser().parseFromString(
+            xmlText,
+            "application/xml"
+          );
+
+
+        const entries =
+          Array.from(
+            xml.getElementsByTagNameNS(
+              "*",
+              "entry"
+            )
+          ).slice(0,3);
+
+
+        if (!entries.length)
+          throw new Error(
+            "No feed entries"
+          );
+
+
+        grid.innerHTML =
+          entries.map(function(entry) {
+
+            const title =
+              textByLocalName(
+                entry,
+                "title"
+              ) ||
+              "Stellar Lift article";
+
+
+            const summary =
+              textByLocalName(
+                entry,
+                "summary"
+              ) ||
+              textByLocalName(
+                entry,
+                "content"
+              );
+
+
+            const published =
+              textByLocalName(
+                entry,
+                "published"
+              ) ||
+              textByLocalName(
+                entry,
+                "updated"
+              );
+
+
+            const linkElements =
+              Array.from(
+                entry.getElementsByTagNameNS(
+                  "*",
+                  "link"
+                )
+              );
+
+
+            const alternate =
+              linkElements.find(
+                function(link) {
+
+                  return (
+                    !link.getAttribute("rel") ||
+                    link.getAttribute("rel") ===
+                    "alternate"
+                  );
+
+                }
+              );
+
+
+            const url =
+              alternate
+                ? alternate.getAttribute("href")
+                : "/blog/";
+
+
+            const description =
+              truncate(
+                stripHtml(summary),
+                150
+              );
+
+
+            return `
+              <article class="article-card">
+
+                <div class="article-meta">
+                  ${escapeHtml(
+                    formatDate(published)
+                  )}
                 </div>
-              </div>
-              <div class="actions">
-                <a class="${buttonClass}" href="${escapeHtml(url)}" rel="noopener">Read article</a>
-              </div>
-            </article>
-          `;
-        }).join("");
 
-        grid.innerHTML = cards;
+                <h3>
+                  <a href="${escapeHtml(url)}">
+                    ${escapeHtml(title)}
+                  </a>
+                </h3>
+
+                <p>
+                  ${escapeHtml(
+                    description ||
+                    "Read the latest practical article from Stellar Lift."
+                  )}
+                </p>
+
+                <a
+                  class="article-read"
+                  href="${escapeHtml(url)}"
+                >
+                  Read article →
+                </a>
+
+              </article>
+            `;
+
+          }).join("");
+
+
       } catch (error) {
-        console.error("Latest blog feed error:", error);
+
+        console.error(
+          "Latest blog feed error:",
+          error
+        );
+
+
         grid.innerHTML = `
-          <article class="card">
-            <div class="card-inner">
-              <div class="meta">
-                <h3><a href="/blog/" rel="noopener">Visit the Stellar Lift blog</a></h3>
-                <p>The latest articles could not be loaded automatically right now. You can still browse all posts on the blog.</p>
-              </div>
+
+          <article class="article-card">
+
+            <div class="article-meta">
+              Stellar Lift Blog
             </div>
-            <div class="actions">
-              <a class="gp primary" href="/blog/" rel="noopener">Open blog</a>
-            </div>
+
+            <h3>
+              <a href="/blog/">
+                Browse the latest articles
+              </a>
+            </h3>
+
+            <p>
+              The automatic feed could not be
+              loaded right now, but all articles
+              are available in the blog.
+            </p>
+
+            <a
+              class="article-read"
+              href="/blog/"
+            >
+              Open the blog →
+            </a>
+
           </article>
+
         `;
+
       }
+
     })();
+
   </script>
+
 </body>
 </html>
